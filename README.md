@@ -3,8 +3,8 @@
 Instant Gaming-like project made with React + NodeJS
 
 ## Objective: 
-- GameCodeShop is an Instant Gaming-like project made with React + NodeJS aimed to all the gamers in the world that want to acess more information about the desired video game or any new upcoming game.
-
+- GameCodeShop is an Instant Gaming-like project made with React + NodeJS aimed to all the gamers in the world that want to get access to the cheapest games on the market providing also information about each game.
+  
 ## Key Features: 
 - Search bar
 - Platform search
