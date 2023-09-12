@@ -41,14 +41,14 @@ Instant Gaming-like project made with React + NodeJS
   - Cart section containing all the games added
   - Summary section containing the price and options to pay or return to the main page
 
-#### All games page:
+### All games page:
   - Between min value and max value $
   - Genre select tag with options
   - Sort by select tag with options
   - Display 30 games - with buttons that display the next 30 games
 
 
-#### Single game page:
+### Single game page:
   - Buy option
   - Add to cart
   - Small description about the game
@@ -57,7 +57,7 @@ Instant Gaming-like project made with React + NodeJS
   - Similar products - few games with same tags as the game being displayed
   - Configurations - Minimum and recommended
 
-#### Footer:
+### Footer:
   - The normal footer for each page - TDB
 
 
