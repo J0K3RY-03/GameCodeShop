@@ -4,25 +4,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 require('dotenv').config();
-const mongoose = require('mongoose');
+const connectDb = require(path.join(__dirname, 'models', 'dbModel'));
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const {connect} = require("mongoose");
 
 const app = express();
-
-const dbName = process.env.DB_NAME;
-const dbUser = process.env.DB_USER;
-const dbPassword = process.env.DB_PASSWORD;
-
-// Connection DB
-
-const dbUrl = `mongodb+srv://${dbUser}:${dbPassword}@e-shopgaming.iplybjq.mongodb.net/${dbName}?retryWrites=true&w=majority`;
-console.log(dbUrl);
-mongoose.connect(dbUrl)
-  .then((result) => console.log('Connected to DB.'))
-  .catch((error) => console.log(`${error} - Failed to connect to the DB.`));
-
+connectDb()
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
