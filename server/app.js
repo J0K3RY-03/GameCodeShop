@@ -1,13 +1,22 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const mongoose = require('mongoose');
 
-var app = express();
+const indexRouter = require('./routes/index');
+const usersRouter = require('./routes/users');
+
+const app = express();
+
+
+// Connection DB
+const dbUrl = 'mongodb+srv://admin:ruiNjason19-9-2023@e-shopgaming.zlreec0.mongodb.net/e-shopGaming?retryWrites=true&w=majority'
+mongoose.connect(dbUrl)
+  .then((result) => console.log('Connected to DB.'))
+  .catch((error) => console.log(`${error} - Failed to connect to the DB.`));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
