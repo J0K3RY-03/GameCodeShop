@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const mongoose = require('mongoose');
 const saveGame = require('../models/games.model');
 
 router.post('/api/submit', (req, res) => {
