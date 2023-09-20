@@ -6,6 +6,8 @@ const registerNewUser = async (req, res) => {
 
   const userNickname = await UserModel.findOne({ username });
 
+  // Since Username and Email are unique, I have to check if the username or email input value already exists in the Database
+
   if (userNickname) {
     return res.json("Username already exists.");
   }
