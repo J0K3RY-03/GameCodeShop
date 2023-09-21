@@ -59,7 +59,7 @@ const loginUser = async (req, res) => {
 
   const token = jwt.sign(username, process.env.ACCESS_TOKEN_SECRET);
 
-  res.json({ token });
+  res.json({ token, id: user._id });
 };
 
 module.exports = {
