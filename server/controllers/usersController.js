@@ -42,7 +42,7 @@ const loginUser = async (req, res) => {
 
   if (!user) {
     return res.json({
-      message: "Email doesn't belong that an account in our website.",
+      message: "The introduced email doesn't belong to an account.",
     });
   }
 
@@ -59,7 +59,7 @@ const loginUser = async (req, res) => {
 
   const token = jwt.sign(username, process.env.ACCESS_TOKEN_SECRET);
 
-  res.json({ token, id: user._id });
+  res.json({ token, userID: user._id, message: "You logged in!" });
 };
 
 module.exports = {

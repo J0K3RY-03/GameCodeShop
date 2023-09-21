@@ -11,14 +11,14 @@ export const Register = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
     try {
-      await axios.post("http://localhost:3000/users/register", {
+      const result = await axios.post("http://localhost:3000/users/register", {
         firstName,
         lastName,
         username,
         email,
         password,
       });
-      alert("Registration completed!");
+      alert(result.data.message);
     } catch (error) {
       console.error(error);
     }
