@@ -3,12 +3,15 @@ const router = express.Router();
 const saveGame = require('../models/games.model');
 
 router.post('/api/submit', (req, res) => {
-    const { name, price, stock } = req.body;
+    console.log(req.body);
+    const { name, price, stock, tags } = req.body;
+
 
     const games = new saveGame({
         name,
         price,
-        stock
+        stock,
+        tags
     });
 
     games.save()

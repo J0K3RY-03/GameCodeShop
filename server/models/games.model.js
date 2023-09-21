@@ -16,6 +16,10 @@ const gamesSchema = new Schema({
             type: Number,
             required:true,
         },
+        tags: {
+            type: [String],
+            required:true,
+        }
     },
     {timestamps: true})
 

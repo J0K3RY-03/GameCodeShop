@@ -5,12 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6715f7-7a2b-4bcc-acea-6ec138ffa62b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/server/routes/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api.tags.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/Form.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Form.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/games.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/games.model.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/models/tags.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/tags.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/server/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/games.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/games.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/error.ejs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/views/index.ejs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,9 +65,15 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\joker\\AppData\\Local\\Programs\\PhpStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\joker\Desktop\BeCode\GameCodeShop\client\src\components" />
+    </key>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -77,6 +88,7 @@
       <workItem from="1695124149822" duration="1693000" />
       <workItem from="1695126023739" duration="8163000" />
       <workItem from="1695194036712" duration="14281000" />
+      <workItem from="1695283755906" duration="9436000" />
     </task>
     <servers />
   </component>
