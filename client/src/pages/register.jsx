@@ -1,4 +1,5 @@
 import { useState } from "react";
+import axios from "axios";
 
 export const Register = () => {
   const [firstName, setFirstName] = useState("");
@@ -7,9 +8,25 @@ export const Register = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    try {
+      await axios.post("http://localhost:3000/users/register", {
+        firstName,
+        lastName,
+        username,
+        email,
+        password,
+      });
+      alert("Registration completed!");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="register-form">
-      <form>
+      <form onSubmit={onSubmit}>
         <label htmlFor="firstName">First name:</label>
         <input
           type="string"
