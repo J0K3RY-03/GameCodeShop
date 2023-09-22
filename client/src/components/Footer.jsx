@@ -10,7 +10,7 @@ const Footer = () => {
       </a>
       <a
         rel="noreferrer"
-        href="https://github.com/ruisinhofilipe/weatherApp"
+        href="https://github.com/J0K3RY-03/GameCodeShop"
         target="_blank"
       >
         Source code
