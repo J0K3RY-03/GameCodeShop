@@ -9,7 +9,6 @@ const db = require(path.join(__dirname, "models", "dbModel"));
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
-const gamesRouter = require("./routes/games");
 
 const app = express();
 
@@ -33,7 +32,6 @@ app.use(cors(corsOptions));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/games", gamesRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
