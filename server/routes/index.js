@@ -1,13 +1,13 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const api = require('./api');
-const tags = require('../models/tags.model');
+const api = require("./api");
+const tags = require("../models/tags.model");
 
-router.use('/api', api);
+router.use("/api", api);
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
 });
 
 module.exports = router;
