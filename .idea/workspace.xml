@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6715f7-7a2b-4bcc-acea-6ec138ffa62b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/server/controllers/createGameController.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/api.games.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/base/_base.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/base/_reset.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/style.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/utils/_variables.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Form.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/newGame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/newGame.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/games.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
