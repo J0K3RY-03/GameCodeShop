@@ -1,0 +1,62 @@
+@import "../utils/variables";
+
+.login-container {
+  background-color: var(--color-light-dark);
+  display: flex;
+  height: 100vh;
+}
+
+.login-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login-registerLink {
+  color: white;
+  width: 50%;
+  &:hover {
+    color: var(--color-red);
+  }
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1.5rem;
+
+  input {
+    background-color: var(--color-ultra-dark);
+    border: 2px solid var(--color-medium-dark);
+    border-radius: 0.5rem;
+    height: 2.8rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    &:focus {
+      outline: none;
+
+      border-color: var(--color-red);
+    }
+  }
+
+  button {
+    background-color: var(--color-red);
+    border: none;
+    border-radius: 0.5rem;
+    height: 2.8rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-red-hover);
+    }
+  }
+}

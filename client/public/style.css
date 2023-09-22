@@ -1,3 +1,11 @@
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-medium-dark: #272727;
+  --color-red: #eb1905;
+  --color-red-hover: #b51506;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,6 +22,78 @@ a {
 
 body {
   min-height: 100vh;
+}
+
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-medium-dark: #272727;
+  --color-red: #eb1905;
+  --color-red-hover: #b51506;
+}
+
+.login-container {
+  background-color: var(--color-light-dark);
+  display: flex;
+  height: 100vh;
+}
+
+.login-container-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.login-registerLink {
+  color: white;
+  width: 50%;
+}
+.login-registerLink:hover {
+  color: var(--color-red);
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  gap: 1.5rem;
+}
+.login-form input {
+  background-color: var(--color-ultra-dark);
+  border: 2px solid var(--color-medium-dark);
+  border-radius: 0.5rem;
+  height: 2.8rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.login-form input:focus {
+  outline: none;
+  border-color: var(--color-red);
+}
+.login-form button {
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 0.5rem;
+  height: 2.8rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.login-form button:hover {
+  cursor: pointer;
+  background-color: var(--color-red-hover);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /*# sourceMappingURL=style.css.map */
