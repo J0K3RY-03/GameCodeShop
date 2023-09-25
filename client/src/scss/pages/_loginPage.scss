@@ -73,10 +73,10 @@
     position: absolute;
     right: 3.5%;
     top: 3.5%;
-    fill: var(--color-red);
+    fill: white;
     &:hover {
       cursor: pointer;
-      fill: var(--color-red-hover);
+      fill: var(--color-red);
     }
   }
 }
