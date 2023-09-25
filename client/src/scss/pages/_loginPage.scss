@@ -1,46 +1,37 @@
 @import "../utils/variables";
 
 .login-container {
-  background-color: var(--color-light-dark);
   display: flex;
   height: 100vh;
 }
 
 .login-container-left {
+  background-color: var(--color-light-dark);
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-}
-
-.login-registerLink {
-  color: white;
-  width: 50%;
-  &:hover {
-    color: var(--color-red);
-  }
+  gap: 1.5rem;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   gap: 1.5rem;
 
   input {
     background-color: var(--color-ultra-dark);
     border: 2px solid var(--color-medium-dark);
     border-radius: 0.5rem;
-    height: 2.8rem;
+    height: 3rem;
     padding: 0.5rem;
     font-size: 1rem;
     color: white;
     font-weight: bold;
     &:focus {
       outline: none;
-
       border-color: var(--color-red);
     }
   }
@@ -57,6 +48,33 @@
     &:hover {
       cursor: pointer;
       background-color: var(--color-red-hover);
+    }
+  }
+}
+
+.login-registerLink {
+  color: white;
+  width: 40%;
+  &:hover {
+    color: var(--color-red);
+  }
+}
+
+.login-container-right {
+  background-image: url("../assets/wallpaper-login.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100vh;
+  svg {
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    fill: var(--color-red);
+    &:hover {
+      cursor: pointer;
+      fill: var(--color-red-hover);
     }
   }
 }
