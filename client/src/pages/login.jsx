@@ -32,9 +32,9 @@ export const Login = () => {
   };
 
   return (
-    <div className="login-container">
-      <div className="login-container-left">
-        <form className="login-form" onSubmit={onSubmit}>
+    <div className="loginAndRegister-container">
+      <div className="loginAndRegister-container-left">
+        <form className="loginAndRegister-form" onSubmit={onSubmit}>
           <input
             type="email"
             placeholder="Email"
@@ -61,7 +61,7 @@ export const Login = () => {
           No account yet ?
         </Link>
       </div>
-      <div className="login-container-right">
+      <div className="loginAndRegister-container-right">
         <Link to="/" className="login-closeButton">
           <svg
             xmlns="http://www.w3.org/2000/svg"

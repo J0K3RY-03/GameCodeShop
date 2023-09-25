@@ -1,11 +1,11 @@
 @import "../utils/variables";
 
-.login-container {
+.loginAndRegister-container {
   display: flex;
   height: 100vh;
 }
 
-.login-container-left {
+.loginAndRegister-container-left {
   background-color: var(--color-light-dark);
   width: 50%;
   display: flex;
@@ -15,7 +15,7 @@
   gap: 1.5rem;
 }
 
-.login-form {
+.loginAndRegister-form {
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -28,8 +28,11 @@
     height: 3rem;
     padding: 0.5rem;
     font-size: 1rem;
-    color: white;
     font-weight: bold;
+    color: white;
+    &:hover {
+      border-color: var(--color-red);
+    }
     &:focus {
       outline: none;
       border-color: var(--color-red);
@@ -54,13 +57,12 @@
 
 .login-registerLink {
   color: white;
-  width: 40%;
   &:hover {
     color: var(--color-red);
   }
 }
 
-.login-container-right {
+.loginAndRegister-container-right {
   background-image: url("../assets/wallpaper-login.jpg");
   position: relative;
   background-size: cover;
@@ -69,8 +71,8 @@
   height: 100vh;
   svg {
     position: absolute;
-    right: 5%;
-    top: 5%;
+    right: 3.5%;
+    top: 3.5%;
     fill: var(--color-red);
     &:hover {
       cursor: pointer;

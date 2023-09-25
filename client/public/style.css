@@ -32,12 +32,12 @@ body {
   --color-red-hover: #b51506;
 }
 
-.login-container {
+.loginAndRegister-container {
   display: flex;
   height: 100vh;
 }
 
-.login-container-left {
+.loginAndRegister-container-left {
   background-color: var(--color-light-dark);
   width: 50%;
   display: flex;
@@ -47,27 +47,30 @@ body {
   gap: 1.5rem;
 }
 
-.login-form {
+.loginAndRegister-form {
   display: flex;
   flex-direction: column;
   width: 40%;
   gap: 1.5rem;
 }
-.login-form input {
+.loginAndRegister-form input {
   background-color: var(--color-ultra-dark);
   border: 2px solid var(--color-medium-dark);
   border-radius: 0.5rem;
   height: 3rem;
   padding: 0.5rem;
   font-size: 1rem;
-  color: white;
   font-weight: bold;
+  color: white;
 }
-.login-form input:focus {
+.loginAndRegister-form input:hover {
+  border-color: var(--color-red);
+}
+.loginAndRegister-form input:focus {
   outline: none;
   border-color: var(--color-red);
 }
-.login-form button {
+.loginAndRegister-form button {
   background-color: var(--color-red);
   border: none;
   border-radius: 0.5rem;
@@ -77,20 +80,19 @@ body {
   color: white;
   font-weight: bold;
 }
-.login-form button:hover {
+.loginAndRegister-form button:hover {
   cursor: pointer;
   background-color: var(--color-red-hover);
 }
 
 .login-registerLink {
   color: white;
-  width: 40%;
 }
 .login-registerLink:hover {
   color: var(--color-red);
 }
 
-.login-container-right {
+.loginAndRegister-container-right {
   background-image: url("../assets/wallpaper-login.jpg");
   position: relative;
   background-size: cover;
@@ -98,13 +100,13 @@ body {
   width: 50%;
   height: 100vh;
 }
-.login-container-right svg {
+.loginAndRegister-container-right svg {
   position: absolute;
-  right: 5%;
-  top: 5%;
+  right: 3.5%;
+  top: 3.5%;
   fill: var(--color-red);
 }
-.login-container-right svg:hover {
+.loginAndRegister-container-right svg:hover {
   cursor: pointer;
   fill: var(--color-red-hover);
 }
