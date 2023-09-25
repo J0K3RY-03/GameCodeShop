@@ -120,7 +120,7 @@ footer {
 }
 
 .footer-container {
-  width: 60%;
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
@@ -128,7 +128,7 @@ footer {
 .footer-top {
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
+  padding: 2rem 0rem;
 }
 
 .footer-top-left ul {
@@ -162,109 +162,79 @@ footer {
   display: flex;
   gap: 1rem;
 }
-
-.discord-social {
-  background-color: rgba(87, 37, 253, 0.5);
+.socials-container a {
   padding: 1rem;
-  height: 3.5rem;
+  height: 3.3rem;
   border-radius: 100%;
-}
-.discord-social:hover {
-  background-color: rgb(87, 37, 253);
-}
-.discord-social svg {
-  height: 1.5rem;
-  fill: white;
-}
-
-.twitter-social {
-  background-color: rgba(37, 170, 253, 0.5);
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  width: 3.5rem;
+  width: 3.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.twitter-social:hover {
-  background-color: rgb(37, 170, 253);
-}
-.twitter-social svg {
-  height: 1.5rem;
-  fill: white;
-}
-
-.instagram-social {
-  background-color: rgba(252, 0, 92, 0.5);
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  width: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.instagram-social:hover {
-  background-color: rgb(252, 0, 92);
-}
-.instagram-social svg {
+.socials-container a svg {
   height: 1.8rem;
   fill: white;
 }
 
+.discord-social {
+  background-color: rgba(87, 37, 253, 0.5);
+}
+.discord-social:hover {
+  background-color: rgb(87, 37, 253);
+}
+
+.twitter-social {
+  background-color: rgba(37, 170, 253, 0.5);
+}
+.twitter-social:hover {
+  background-color: rgb(37, 170, 253);
+}
+
+.instagram-social {
+  background-color: rgba(252, 0, 92, 0.5);
+}
+.instagram-social:hover {
+  background-color: rgb(252, 0, 92);
+}
+
 .facebook-social {
   background-color: rgba(0, 60, 242, 0.5);
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  width: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .facebook-social:hover {
   background-color: rgb(0, 60, 242);
 }
-.facebook-social svg {
-  height: 1.5rem;
-  fill: white;
-}
 
 .youtube-social {
   background-color: rgba(255, 0, 0, 0.5);
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  width: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .youtube-social:hover {
   background-color: rgb(255, 0, 0);
 }
-.youtube-social svg {
-  height: 1.5rem;
-  fill: white;
-}
 
 .twitch-social {
   background-color: rgba(168, 7, 255, 0.5);
-  padding: 1rem;
-  height: 3.5rem;
-  border-radius: 100%;
-  width: 3.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .twitch-social:hover {
   background-color: rgb(168, 7, 255);
 }
-.twitch-social svg {
-  height: 2rem;
-  fill: white;
+
+.footer-bottom {
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+.footer-bottom p {
+  font-size: 1.5rem;
+  color: rgb(153, 153, 153);
+  font-weight: bold;
+}
+.footer-bottom p a {
+  text-decoration: none;
+  color: blue;
+  text-decoration: underline;
+}
+.footer-bottom p a:hover {
+  color: white;
 }
 
 * {
