@@ -109,7 +109,7 @@ const Footer = () => {
             >
               Rui Silva
             </a>{" "}
-            and{" "}
+            &{" "}
             <a
               rel="noreferrer"
               href="https://github.com/J0K3RY-03"
@@ -117,7 +117,7 @@ const Footer = () => {
             >
               Jason
             </a>{" "}
-            ||{" "}
+            |{" "}
             <a
               rel="noreferrer"
               href="https://github.com/J0K3RY-03/GameCodeShop"

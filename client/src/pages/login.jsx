@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailAndPasswordError, setEmailAndPasswordError] = useState("");
 
   const [_, setCookies] = useCookies(["access_token"]);
 
@@ -15,18 +16,23 @@ export const Login = () => {
   const onSubmit = async (event) => {
     event.preventDefault();
 
+    //Reset error handlers states
+    setEmailAndPasswordError("");
+
     try {
       const response = await axios.post("http://localhost:3000/users/login", {
         email,
         password,
       });
 
+      if (response.data.message !== "You logged in!") {
+        setEmailAndPasswordError(response.data.message);
+      }
+
       setCookies("access_token", response.data.token);
       window.localStorage.setItem("userID", response.data.userID);
 
-      navigate("/");
-
-      alert(response.data.message);
+      // navigate("/");
     } catch (error) {
       console.error(error);
     }
@@ -53,6 +59,9 @@ export const Login = () => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
+          <div className="handle-emailAndPassword-login-error">
+            {emailAndPasswordError}
+          </div>
 
           <button type="submit" className="login-button">
             Submit

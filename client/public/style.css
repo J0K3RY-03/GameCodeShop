@@ -112,7 +112,8 @@ body {
 }
 
 .handle-email-register-error,
-.handle-username-register-error {
+.handle-username-register-error,
+.handle-emailAndPassword-login-error {
   font-weight: bold;
   color: rgb(241, 145, 145);
 }
@@ -134,13 +135,14 @@ footer {
 .footer-top {
   display: flex;
   justify-content: space-between;
-  padding: 2rem 0rem;
+  padding: 2rem 0rem 1rem 0rem;
 }
 
 .footer-top-left ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  font-weight: bold;
 }
 .footer-top-left li {
   display: flex;
@@ -225,22 +227,23 @@ footer {
 }
 
 .footer-bottom {
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   display: flex;
   justify-content: center;
 }
 .footer-bottom p {
-  font-size: 1.5rem;
-  color: rgb(153, 153, 153);
+  font-size: 1.2rem;
+  color: #c5c3c3;
   font-weight: bold;
 }
 .footer-bottom p a {
   text-decoration: none;
-  color: blue;
-  text-decoration: underline;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 .footer-bottom p a:hover {
-  color: white;
+  text-decoration: underline;
 }
 
 * {
