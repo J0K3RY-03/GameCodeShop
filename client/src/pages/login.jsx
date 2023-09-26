@@ -14,6 +14,7 @@ export const Login = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
     try {
       const response = await axios.post("http://localhost:3000/users/login", {
         email,

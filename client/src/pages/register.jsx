@@ -9,9 +9,16 @@ export const Register = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [emailError, setEmailError] = useState("");
+  const [usernameError, setUsernameError] = useState("");
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    //Reset error handlers states
+    setEmailError("");
+    setUsernameError("");
+
     try {
       const result = await axios.post("http://localhost:3000/users/register", {
         firstName,
@@ -20,7 +27,18 @@ export const Register = () => {
         email,
         password,
       });
-      alert(result.data.message);
+      if (
+        result.data.message ===
+        "The introduced Username already belongs to an account."
+      ) {
+        setUsernameError(result.data.message);
+      } else if (
+        result.data.message ===
+        "The introduced Email already belongs to an account."
+      ) {
+        setEmailError(result.data.message);
+      }
+      console.log(result.data.message);
     } catch (error) {
       console.error(error);
     }
@@ -56,6 +74,7 @@ export const Register = () => {
             placeholder="Username"
             onChange={(event) => setUsername(event.target.value)}
           />
+          <div className="handle-username-register-error">{usernameError}</div>
 
           <input
             type="email"
@@ -65,6 +84,7 @@ export const Register = () => {
             placeholder="Email"
             onChange={(event) => setEmail(event.target.value)}
           />
+          <div className="handle-email-register-error">{emailError}</div>
 
           <input
             type="password"
