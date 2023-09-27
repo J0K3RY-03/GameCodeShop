@@ -9,7 +9,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const logout = () => {
-    setCookies("access_token", "");
+    setCookies("access_token", "", { maxAge: 1 });
     window.localStorage.removeItem("userID");
     navigate("/");
   };
