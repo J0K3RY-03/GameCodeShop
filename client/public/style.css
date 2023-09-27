@@ -204,4 +204,229 @@ header .container_header_log_card a i {
   font-size: 1.5rem;
 }
 
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-red-hover: #b51506;
+}
+
+.loginAndRegister-container {
+  display: flex;
+  height: 100vh;
+}
+
+.loginAndRegister-container-left {
+  background-color: var(--color-light-dark);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loginAndRegister-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 1.5rem;
+}
+.loginAndRegister-form input {
+  background-color: var(--color-ultra-dark);
+  border: 2px solid var(--color-medium-dark);
+  border-radius: 0.5rem;
+  height: 3rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+.loginAndRegister-form input:hover {
+  border-color: var(--color-red);
+}
+.loginAndRegister-form input:focus {
+  outline: none;
+  border-color: var(--color-red);
+}
+.loginAndRegister-form button {
+  background-color: var(--color-red);
+  border: none;
+  border-radius: 0.5rem;
+  height: 2.8rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+}
+.loginAndRegister-form button:hover {
+  cursor: pointer;
+  background-color: var(--color-red-hover);
+}
+
+.login-registerLink {
+  color: white;
+}
+.login-registerLink:hover {
+  color: var(--color-red);
+}
+
+.loginAndRegister-container-right {
+  background-image: url("../assets/wallpaper-login.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100vh;
+}
+.loginAndRegister-container-right svg {
+  position: absolute;
+  right: 3.5%;
+  top: 3.5%;
+  fill: white;
+}
+.loginAndRegister-container-right svg:hover {
+  cursor: pointer;
+  fill: var(--color-red);
+}
+
+.handle-email-register-error,
+.handle-username-register-error,
+.handle-emailAndPassword-login-error {
+  font-weight: bold;
+  color: rgb(241, 145, 145);
+}
+
+footer {
+  background-color: var(--color-ultra-dark);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0rem 1rem 0rem;
+}
+
+.footer-top-left ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: bold;
+}
+.footer-top-left li {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.footer-top-left li svg {
+  fill: var(--color-red);
+}
+.footer-top-left li a {
+  color: white;
+  font-size: 1.2rem;
+}
+.footer-top-left li a:hover {
+  color: var(--color-red);
+}
+
+.footer-top-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials-container {
+  display: flex;
+  gap: 1rem;
+}
+.socials-container a {
+  padding: 1rem;
+  height: 3.3rem;
+  border-radius: 100%;
+  width: 3.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socials-container a svg {
+  height: 1.8rem;
+  fill: white;
+}
+
+.discord-social {
+  background-color: rgba(87, 37, 253, 0.5);
+}
+.discord-social:hover {
+  background-color: rgb(87, 37, 253);
+}
+
+.twitter-social {
+  background-color: rgba(37, 170, 253, 0.5);
+}
+.twitter-social:hover {
+  background-color: rgb(37, 170, 253);
+}
+
+.instagram-social {
+  background-color: rgba(252, 0, 92, 0.5);
+}
+.instagram-social:hover {
+  background-color: rgb(252, 0, 92);
+}
+
+.facebook-social {
+  background-color: rgba(0, 60, 242, 0.5);
+}
+.facebook-social:hover {
+  background-color: rgb(0, 60, 242);
+}
+
+.youtube-social {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+.youtube-social:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+.twitch-social {
+  background-color: rgba(168, 7, 255, 0.5);
+}
+.twitch-social:hover {
+  background-color: rgb(168, 7, 255);
+}
+
+.footer-bottom {
+  padding: 1rem 0rem;
+  display: flex;
+  justify-content: center;
+}
+.footer-bottom p {
+  font-size: 1.2rem;
+  color: #c5c3c3;
+  font-weight: bold;
+}
+.footer-bottom p a {
+  text-decoration: none;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-bottom p a:hover {
+  text-decoration: underline;
+}
+
 /*# sourceMappingURL=style.css.map */
