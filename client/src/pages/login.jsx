@@ -25,14 +25,17 @@ export const Login = () => {
         password,
       });
 
-      if (response.data.message !== "You logged in!") {
+      if (response.data.username) {
+        // Store token and user ID
+        setCookies("access_token", response.data.token);
+        window.localStorage.setItem("userID", response.data.userID);
+        //Check if the user name is being printed
+        console.log(response.data.username);
+        // At this point the user is logged in and should be redirected to Home page
+        navigate("/");
+      } else if (response.data.message !== "You logged in!") {
         setEmailAndPasswordError(response.data.message);
       }
-
-      setCookies("access_token", response.data.token);
-      window.localStorage.setItem("userID", response.data.userID);
-
-      // navigate("/");
     } catch (error) {
       console.error(error);
     }
