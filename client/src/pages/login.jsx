@@ -8,6 +8,8 @@ export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [emailAndPasswordError, setEmailAndPasswordError] = useState("");
+  const [emailAndPasswordErrorDisplay, setEmailAndPasswordErrorDisplay] =
+    useState("none");
 
   const [_, setCookies] = useCookies(["access_token"]);
 
@@ -17,6 +19,7 @@ export const Login = () => {
     event.preventDefault();
 
     //Reset error handlers states
+    setEmailAndPasswordErrorDisplay("none");
     setEmailAndPasswordError("");
 
     try {
@@ -34,6 +37,7 @@ export const Login = () => {
         // At this point the user is logged in and should be redirected to Home page
         navigate("/");
       } else if (response.data.message !== "You logged in!") {
+        setEmailAndPasswordErrorDisplay("block");
         setEmailAndPasswordError(response.data.message);
       }
     } catch (error) {
@@ -62,7 +66,10 @@ export const Login = () => {
             value={password}
             onChange={(event) => setPassword(event.target.value)}
           />
-          <div className="handle-emailAndPassword-login-error">
+          <div
+            className="handle-emailAndPassword-login-error"
+            style={{ display: emailAndPasswordErrorDisplay }}
+          >
             {emailAndPasswordError}
           </div>
 

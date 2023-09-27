@@ -11,11 +11,15 @@ export const Register = () => {
   const [password, setPassword] = useState("");
   const [emailError, setEmailError] = useState("");
   const [usernameError, setUsernameError] = useState("");
+  const [emailErrorDisplay, setEmailErrorDisplay] = useState("none");
+  const [usernameErrorDisplay, setUsernameErrorDisplay] = useState("none");
 
   const onSubmit = async (event) => {
     event.preventDefault();
 
     //Reset error handlers states
+    setEmailErrorDisplay("none");
+    setUsernameErrorDisplay("none");
     setEmailError("");
     setUsernameError("");
 
@@ -31,11 +35,13 @@ export const Register = () => {
         result.data.message ===
         "The introduced Username already belongs to an account."
       ) {
+        setUsernameErrorDisplay("block");
         setUsernameError(result.data.message);
       } else if (
         result.data.message ===
         "The introduced Email already belongs to an account."
       ) {
+        setEmailErrorDisplay("block");
         setEmailError(result.data.message);
       }
       console.log(result.data.message);
@@ -74,7 +80,12 @@ export const Register = () => {
             placeholder="Username"
             onChange={(event) => setUsername(event.target.value)}
           />
-          <div className="handle-username-register-error">{usernameError}</div>
+          <div
+            className="handle-username-register-error"
+            style={{ display: usernameErrorDisplay }}
+          >
+            {usernameError}
+          </div>
 
           <input
             type="email"
@@ -84,7 +95,12 @@ export const Register = () => {
             placeholder="Email"
             onChange={(event) => setEmail(event.target.value)}
           />
-          <div className="handle-email-register-error">{emailError}</div>
+          <div
+            className="handle-email-register-error"
+            style={{ display: emailErrorDisplay }}
+          >
+            {emailError}
+          </div>
 
           <input
             type="password"

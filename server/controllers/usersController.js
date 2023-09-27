@@ -63,7 +63,7 @@ const loginUser = async (req, res) => {
     token,
     userID: user._id,
     message: "You logged in!",
-    username: user.username,
+    username,
   });
 };
 
