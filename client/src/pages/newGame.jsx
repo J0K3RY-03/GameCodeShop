@@ -62,57 +62,57 @@ function GameForm() {
   };
 
   return (
-      <div>
-        <h2>Formulaire Utilisateur</h2>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name Game :
+      <div className={'container_newGame_page'}>
+        <div className={'container_newGame_Form'}>
+          <form className={'form_newGame'} onSubmit={handleSubmit}>
             <input
+                id='name'
                 type="text"
                 name="name"
+                placeholder={'Name of the game'}
                 value={formData.name}
                 onChange={handleChange}
             />
-          </label>
-          <br />
-          <label>
-            Price :
-            <input
-                type="text"
-                name="price"
-                value={formData.price}
-                onChange={handleChange}
-            />
-          </label>
-          <br />
-          <label>
-            Stock :
-            <input
-                type="number"
-                name="stock"
-                value={formData.stock}
-                onChange={handleChange}
-            />
-          </label>
-          <br />
-          <label>Tags :</label>
-          {tags.map((tag) => (
-              <div key={tag}>
-                <input
-                    type="checkbox"
-                    name={tag}
-                    checked={
-                        formData.selectedTags && formData.selectedTags.includes(tag)
-                    }
-                    onChange={() => handleTagChange(tag)}
-                />
-                <label>{tag}</label>
-                {console.log(tags)}
-              </div>
-          ))}
-          <br />
-          <button type="submit">Soumettre</button>
-        </form>
+            <br />
+              <input
+                  id='price'
+                  type="text"
+                  name="price"
+                  placeholder={'Price'}
+                  value={formData.price}
+                  onChange={handleChange}
+              />
+            <br />
+              <input
+                  id='stock'
+                  type="number"
+                  name="stock"
+                  placeholder={'Stock'}
+                  value={formData.stock}
+                  onChange={handleChange}
+              />
+            <br />
+            <label>Tags :</label>
+            <div className={'container_tags_newGame'}>
+              {tags.map((tag) => (
+                  <div className={'container_input_checkbox_newGame'} key={tag}>
+                    <input
+                        type="checkbox"
+                        name={tag}
+                        checked={
+                            formData.selectedTags && formData.selectedTags.includes(tag)
+                        }
+                        onChange={() => handleTagChange(tag)}
+                    />
+                    <label>{tag}</label>
+                    {console.log(tags)}
+                  </div>
+              ))}
+            </div>
+            <br />
+            <button type="submit">Soumettre</button>
+          </form>
+        </div>
       </div>
   );
 }

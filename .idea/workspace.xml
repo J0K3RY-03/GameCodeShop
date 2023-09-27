@@ -5,14 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6715f7-7a2b-4bcc-acea-6ec138ffa62b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/scss/base/_base.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/scss/base/_reset.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/scss/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/scss/utils/_variables.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/NavbarPlateformes.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/components/_header.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/components/_navbarPlateformes.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/pages/_createGamePage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/style.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/newGame.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/newGame.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scss/utils/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/utils/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +91,10 @@
       <workItem from="1695126023739" duration="8163000" />
       <workItem from="1695194036712" duration="14281000" />
       <workItem from="1695283755906" duration="9436000" />
+      <workItem from="1695581127282" duration="191000" />
+      <workItem from="1695713338577" duration="260000" />
+      <workItem from="1695713616570" duration="8557000" />
+      <workItem from="1695732945888" duration="6726000" />
     </task>
     <servers />
   </component>
