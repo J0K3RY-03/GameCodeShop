@@ -27,6 +27,17 @@ body {
   min-height: 100vh;
 }
 
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-red-hover: #b51506;
+}
+
 .container_newGame_page {
   background: var(--color-medium-dark);
   color: var(--color-white);
@@ -196,12 +207,30 @@ header .logo_gcs {
   padding-left: 1rem;
   color: white;
 }
+header .container_header_log_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 header .container_header_log_card a {
   padding-right: 1rem;
   color: white;
 }
 header .container_header_log_card a i {
   font-size: 1.5rem;
+}
+header .userConnected-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .userConnected-menu svg {
+  height: 1.5rem;
+  fill: white;
+}
+header .userConnected-menu svg:hover {
+  cursor: pointer;
+  fill: var(--color-red);
 }
 
 :root {
@@ -299,6 +328,39 @@ header .container_header_log_card a i {
 .handle-emailAndPassword-login-error {
   font-weight: bold;
   color: rgb(241, 145, 145);
+}
+
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-red-hover: #b51506;
+}
+
+.profile-contentContainer {
+  background-color: var(--color-medium-dark);
+}
+
+.profile-navbar {
+  display: flex;
+  gap: 1.5rem;
+}
+.profile-navbar li {
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.profile-navbar li:hover {
+  cursor: pointer;
+  color: var(--color-red);
+}
+.profile-navbar .active {
+  color: var(--color-red);
+  border-bottom: 1px solid var(--color-red);
 }
 
 footer {

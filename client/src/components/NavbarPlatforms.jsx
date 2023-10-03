@@ -1,4 +1,3 @@
-// import { Link } from "react-router-dom";
 import nintendo from "../../public/assets/nintendo.png";
 import { useState } from "react";
 

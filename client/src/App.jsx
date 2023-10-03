@@ -6,6 +6,7 @@ import Footer from "./components/Footer.jsx";
 import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Home } from "./pages/home";
+import { UserProfile } from "./pages/userProfile";
 
 function App() {
   // // Current location
@@ -25,6 +26,7 @@ function App() {
         <Route path="/new-game" element={<GameForm />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
+        <Route path="/user-profile" element={<UserProfile />}></Route>
       </Routes>
       <Footer></Footer>
     </div>

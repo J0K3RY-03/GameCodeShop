@@ -11,13 +11,29 @@ header {
   }
 
   .container_header_log_card {
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
     a {
       padding-right: 1rem;
       color: white;
 
       i {
         font-size: 1.5rem;
+      }
+    }
+  }
+
+  .userConnected-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 1.5rem;
+      fill: white;
+      &:hover {
+        cursor: pointer;
+        fill: var(--color-red);
       }
     }
   }
