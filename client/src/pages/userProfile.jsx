@@ -5,7 +5,7 @@ import { Reviews } from "../components/Reviews";
 
 export const UserProfile = () => {
   // States that controll and display li content
-  const [activeLi, setActiveLi] = useState(null);
+  const [activeLi, setActiveLi] = useState("profile");
 
   const handleButtonClick = (whichLi) => {
     setActiveLi(whichLi);

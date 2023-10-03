@@ -357,6 +357,7 @@ header .userConnected-menu svg:hover {
   border-bottom: 1.5px solid grey;
 }
 .profile-navbar li {
+  font-size: 1.3rem;
   color: white;
   font-weight: bold;
   border: none;
@@ -411,8 +412,13 @@ header .userConnected-menu svg:hover {
   font-weight: bold;
   letter-spacing: 0.05rem;
 }
-.profile-user-information div {
+.profile-user-information .userPersonalInformation,
+.profile-user-information .display-userInformation,
+.profile-user-information .userEmail,
+.profile-user-information .userPassword {
   width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 footer {

@@ -15,6 +15,7 @@
   width: 80%;
   border-bottom: 1.5px solid grey;
   li {
+    font-size: 1.3rem;
     color: white;
     font-weight: bold;
     border: none;
@@ -69,7 +70,12 @@
       }
     }
   }
-  div {
+  .userPersonalInformation,
+  .display-userInformation,
+  .userEmail,
+  .userPassword {
     width: 80%;
+    display: flex;
+    justify-content: center;
   }
 }
