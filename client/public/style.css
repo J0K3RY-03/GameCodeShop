@@ -1,14 +1,14 @@
 :root {
-    --color-ultra-dark: #101010;
-    --color-light-dark: #323232;
-    --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
-    --color-medium-dark: #272727;
-    --color-light-grey: #5b5b5b;
-    --color-red: #eb1905;
-    --color-white: #ffffff;
-    --color-light-white: #949494;
-    --color-red-hover: #b51506;
-    --color-light-green: #3bff00;
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-light-white: #949494;
+  --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
 }
 
 * {
@@ -27,6 +27,20 @@ a {
 
 body {
   min-height: 100vh;
+  background: var(--color-medium-dark);
+}
+
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-light-white: #949494;
+  --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
 }
 
 .container_newGame_page {
@@ -99,12 +113,15 @@ body {
   background: var(--color-red-hover);
 }
 
-.navbar_plateformes .search_on {
+.search_on {
   background-color: var(--color-red) !important;
-}
-.navbar_plateformes .nav_container_all_plateformes {
-  position: relative;
   width: 600px;
+}
+
+.nav_container_all_plateformes {
+  position: relative;
+  gap: 50px;
+  padding: 0 0 0 30px;
   background-color: rgba(135, 135, 135, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -115,27 +132,25 @@ body {
   justify-content: space-around;
   color: white;
 }
-.navbar_plateformes .nav_container_all_plateformes a {
+.nav_container_all_plateformes a {
   color: white;
-}
-.navbar_plateformes .nav_container_all_plateformes .nav_ico {
   margin-right: 0.5rem;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_nintendo_section {
+.nav_container_all_plateformes .nav_ico {
+  margin-right: 0.5rem;
+}
+.nav_container_all_plateformes .nav_nintendo_section {
   display: flex;
   align-items: center;
-  margin-right: 3rem;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_nintendo_section .nintendo_img_container {
+.nav_container_all_plateformes .nav_nintendo_section .nintendo_img_container {
   height: 16px;
   width: 16px;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_nintendo_section .nintendo_img_container img {
+.nav_container_all_plateformes .nav_nintendo_section .nintendo_img_container img {
   max-width: 100%;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_plateformes_search {
-  position: absolute;
-  right: -15px;
+.nav_container_all_plateformes .nav_plateformes_search {
   border-radius: 50px;
   background: var(--color-red);
   height: inherit;
@@ -145,7 +160,7 @@ body {
   align-items: center;
   cursor: pointer;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_plateformes_search:hover > .gcs_search_nav {
+.nav_container_all_plateformes .nav_plateformes_search:hover > .gcs_search_nav {
   transition: 0.2s ease-in-out;
   transform: scale(1.4);
 }
@@ -187,23 +202,94 @@ body {
   transform: scale(1.3);
 }
 
-header {
+.header_home {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #272727;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%);
+  height: 60vh;
+  width: 100%;
 }
-header .logo_gcs {
+.header_home .header-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  padding: 30px;
+  z-index: 4;
+}
+.header_home .logo_gcs {
   padding-left: 1rem;
   color: white;
 }
-header .container_header_log_card a {
+.header_home .container_header_log_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header_home .container_header_log_card a {
   padding-right: 1rem;
   color: white;
 }
-header .container_header_log_card a i {
+.header_home .container_header_log_card a i {
   font-size: 1.5rem;
+}
+.header_home .container_header_log_card a i:hover {
+  color: var(--color-red);
+}
+.header_home .userConnected-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header_home .userConnected-menu svg {
+  height: 1.5rem;
+  fill: white;
+}
+.header_home .userConnected-menu svg:hover {
+  cursor: pointer;
+  fill: var(--color-red);
+}
+
+.container_topBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+.container_topBanner::after {
+  content: "";
+  clip-path: polygon(0 100%, 100% 100%, 0 0);
+  background: var(--color-light-dark);
+  height: 60px;
+  min-width: 1700px;
+  width: 100%;
+  position: absolute;
+  bottom: -1px;
+  z-index: 3;
+}
+.container_topBanner .container_img_topBanner {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.container_topBanner .container_img_topBanner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.container_topBanner .content_topBanner {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  font-size: 2rem;
+  color: white;
 }
 
 :root {
@@ -214,7 +300,9 @@ header .container_header_log_card a i {
   --color-light-grey: #5b5b5b;
   --color-red: #eb1905;
   --color-white: #ffffff;
+  --color-light-white: #949494;
   --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
 }
 
 .loginAndRegister-container {
@@ -301,6 +389,99 @@ header .container_header_log_card a i {
 .handle-emailAndPassword-login-error {
   font-weight: bold;
   color: rgb(241, 145, 145);
+}
+
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-light-white: #949494;
+  --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
+}
+
+.profile-contentContainer {
+  background-color: var(--color-medium-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-navbar {
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  width: 80%;
+  border-bottom: 1.5px solid grey;
+}
+.profile-navbar li {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.profile-navbar li:hover {
+  cursor: pointer;
+  color: var(--color-red);
+}
+.profile-navbar .active {
+  color: var(--color-red);
+  border-bottom: 5.5px solid var(--color-red);
+}
+
+.profile-user-information {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.profile-user-information ul {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  border-right: 2px solid grey;
+}
+.profile-user-information ul li {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+.profile-user-information ul li:hover {
+  cursor: pointer;
+}
+.profile-user-information ul li:hover .profileInformation-li-big {
+  color: var(--color-red);
+}
+.profile-user-information ul li svg {
+  height: 1.2rem;
+  fill: var(--color-red);
+}
+.profile-user-information ul li .profileInformation-li-big {
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.profile-user-information ul li .profileInformation-li-big.active {
+  color: var(--color-red);
+}
+.profile-user-information ul li .profileInformation-li-small {
+  color: grey;
+  font-weight: bold;
+  letter-spacing: 0.05rem;
+}
+.profile-user-information .userPersonalInformation,
+.profile-user-information .display-userInformation,
+.profile-user-information .userEmail,
+.profile-user-information .userPassword {
+  width: 80%;
+  display: flex;
+  justify-content: center;
 }
 
 footer {
@@ -429,6 +610,163 @@ footer {
 }
 .footer-bottom p a:hover {
   text-decoration: underline;
+}
+
+.header_cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background: var(--color-ultra-dark);
+  color: white;
+  padding: 2rem;
+}
+.header_cart a {
+  color: white;
+}
+.header_cart .container_cart_step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+.header_cart .container_cart_step .sub_container_cart_step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.header_cart .container_cart_step .sub_container_cart_step .cart_step_separator {
+  height: 3px;
+  width: 30px;
+  background: var(--color-light-dark);
+  flex: 1;
+}
+.header_cart .container_cart_step .sub_container_cart_step .cart_title_step {
+  margin: 0 1rem;
+}
+.header_cart .container_cart_step .sub_container_cart_step .circle_step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 3px solid var(--color-light-dark);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  font-size: 1rem;
+}
+.header_cart .container_cart_securised_paiement {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+.header_cart .container_cart_securised_paiement .container_cart_lock {
+  display: flex;
+}
+.header_cart .container_cart_securised_paiement .container_cart_lock i {
+  color: var(--color-light-green);
+  margin: 1rem;
+  font-size: 1.4rem;
+}
+.header_cart .container_cart_securised_paiement .container_cart_lock .cart_separator_securised_paiement {
+  height: inherit;
+  width: 2px;
+  margin-right: 1rem;
+  background: var(--color-light-dark);
+}
+.header_cart .container_cart_securised_paiement .cart_text_securised_paiement .second_text_cart_secured_paiement {
+  color: var(--color-light-grey);
+  margin-top: 0.2rem;
+}
+
+.container_section_cart {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  margin: auto;
+}
+.container_section_cart .container_cart_resume {
+  display: flex;
+  gap: 5rem;
+}
+.container_section_cart .container_cart_resume .cart_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-dark);
+  flex: 1;
+  padding: 4rem;
+  border-radius: 10px;
+}
+.container_section_cart .container_cart_resume .cart_section i {
+  font-size: 3rem;
+  color: var(--color-red);
+}
+.container_section_cart .container_cart_resume .cart_section h3 {
+  color: white;
+  margin: 2rem 0;
+}
+.container_section_cart .container_cart_resume .cart_section p {
+  color: var(--color-light-white);
+  text-align: center;
+}
+.container_section_cart .container_cart_resume .cart_section button {
+  margin: 2rem 0 0 0;
+  background: inherit;
+  outline: none;
+  border: 1px solid var(--color-light-white);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.container_section_cart .container_cart_resume .cart_section button:hover {
+  background: var(--color-red);
+  cursor: pointer;
+}
+.container_section_cart .container_cart_resume .cart_section_resume {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  background: var(--color-light-dark);
+  padding: 2rem;
+  border-radius: 10px;
+  color: var(--color-light-white);
+  font-size: 1.1rem;
+  max-height: 280px;
+}
+.container_section_cart .container_cart_resume .cart_section_resume .cart_container_officiel_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.container_section_cart .container_cart_resume .cart_section_resume .cart_container_reduct_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.container_section_cart .container_cart_resume .cart_section_resume .cart_container_total_price {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 2.5rem 0;
+  color: white;
+  font-size: 1.2rem;
+}
+.container_section_cart .container_cart_resume .cart_section_resume button {
+  background: rgba(252, 0, 0, 0.7);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: 1px solid rgba(252, 0, 0, 0.7);
+  color: white;
+}
+.container_section_cart .container_cart_resume .cart_section_resume button:hover {
+  background: var(--color-red-hover);
+  cursor: pointer;
+  border: 1px solid white;
 }
 
 /*# sourceMappingURL=style.css.map */
