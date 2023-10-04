@@ -1,9 +1,23 @@
-header {
+.header_home {
+
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    padding: 30px;
+    z-index: 4;
+  }
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #272727;
+  background: rgb(0,0,0);
+  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%);
+  height: 60vh;
+  width: 100%;
 
   .logo_gcs {
     padding-left: 1rem;
@@ -20,6 +34,10 @@ header {
 
       i {
         font-size: 1.5rem;
+
+        &:hover {
+          color: var(--color-red);
+        }
       }
     }
   }

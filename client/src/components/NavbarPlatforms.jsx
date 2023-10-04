@@ -66,11 +66,9 @@ export const NavbarPlateformes = () => {
   };
 
   return (
-    <div className="navbar_plateformes">
       <div className={`${style} nav_container_all_plateformes`}>
         {renderContent()}
       </div>
-    </div>
   );
 };
 

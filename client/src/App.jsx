@@ -7,13 +7,14 @@ import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Home } from "./pages/home";
 import { UserProfile } from "./pages/userProfile";
+import Cart from "./pages/cart"
 
 function App() {
   // // Current location
   const location = useLocation();
 
   // Array that contains all the paths where I don't want to display the Header
-  const pathsWithoutHeader = ["/login", "/register"];
+    const pathsWithoutHeader = ["/login", "/register", "/cart"];
 
   // Check if the array contains the path
   const shouldDisplayHeader = !pathsWithoutHeader.includes(location.pathname);
@@ -25,8 +26,9 @@ function App() {
         <Route path="/" element={<Home />}></Route>
         <Route path="/new-game" element={<GameForm />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/register" element={<Register />}></Route>
-        <Route path="/user-profile" element={<UserProfile />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+          <Route path="/user-profile" element={<UserProfile />}></Route>
       </Routes>
       <Footer></Footer>
     </div>
