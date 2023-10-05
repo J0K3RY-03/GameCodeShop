@@ -3,6 +3,33 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
+const displayUserInformation = async (req, res) => {
+  // Get token from cookies
+  const token = req.cookies.access_token;
+
+  if (!token) {
+    return res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+
+  try {
+    // Verify JWT token
+    const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    //Get the User ID from the token
+    const userID = decodedToken.id;
+
+    const user = UserModel.findOne({ _id: userID });
+
+    res.status(200).json({ userInfo: user });
+  } catch (error) {
+    res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+};
+
 const registerNewUser = async (req, res) => {
   const { firstName, lastName, username, email, password } = req.body;
 
@@ -75,8 +102,8 @@ const updateUserPersonalInformation = async (req, res) => {
       .json({ message: "You don't have permission, please log in!" });
   }
 
-  // Verify JWT token
   try {
+    // Verify JWT token
     const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
     //Get the User ID from the token
@@ -116,8 +143,8 @@ const updateUserEmail = async (req, res) => {
       .json({ message: "You don't have permission, please log in!" });
   }
 
-  // Verify JWT token
   try {
+    // Verify JWT token
     const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
     //Get the User ID from the token
@@ -180,8 +207,8 @@ const updateUserPassword = async (req, res) => {
       .json({ message: "You don't have permission, please log in!" });
   }
 
-  // Verify JWT token
   try {
+    // Verify JWT token
     const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
 
     //Get the User ID from the token
@@ -237,4 +264,5 @@ module.exports = {
   updateUserPersonalInformation,
   updateUserEmail,
   updateUserPassword,
+  displayUserInformation,
 };
