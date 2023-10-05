@@ -190,18 +190,29 @@ const updateUserPassword = async (req, res) => {
     const user = await UserModel.findOne({ _id: userID });
 
     if (user) {
-      const { password } = req.body;
+      const { newPassword, confirmNewPassword, currentPassword } = req.body;
 
-      const hashedPassword = await bcrypt.hash(password, 10);
+      if (newPassword !== confirmNewPassword) {
+        return res.status(401).json({ message: "Passwords don't match." });
+      } else if (currentPassword === newPassword) {
+        return res.status(401).json({
+          message: "New password needs to be different from the current one.",
+        });
+      }
 
       // Check if password value input matches the one stored inside the DB
-      // const checkPassword = await bcrypt.compare(password, user.password);
+      const checkPassword = await bcrypt.compare(
+        currentPassword,
+        user.password
+      );
 
-      // if (!checkPassword) {
-      //   return res.status(401).json({
-      //     message: "Password introduced is incorrect.",
-      //   });
-      // }
+      if (!checkPassword) {
+        return res.status(401).json({
+          message: "The current password introduced is incorrect.",
+        });
+      }
+
+      const hashedPassword = await bcrypt.hash(newPassword, 10);
 
       // Update user information
       const userUpdate = await UserModel.updateOne(
@@ -209,11 +220,9 @@ const updateUserPassword = async (req, res) => {
         { $set: { password: hashedPassword } }
       );
 
-      res.json({ message: "password modified", userID });
+      res.json({ message: "Password modified", userID });
     } else {
-      res
-        .status(401)
-        .json({ message: "There's been an error. Log in again, please." });
+      res.status(401).json({ message: "There's been an error, log in again." });
     }
   } catch (error) {
     res
