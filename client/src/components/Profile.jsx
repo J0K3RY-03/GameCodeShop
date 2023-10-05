@@ -11,6 +11,7 @@ export const Profile = () => {
   const handleButtonClick = (whichLi) => {
     setActiveLi(whichLi);
   };
+
   return (
     <div className="profile-user-information">
       <ul>

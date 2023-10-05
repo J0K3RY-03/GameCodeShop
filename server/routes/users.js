@@ -14,7 +14,7 @@ router.post("/register", registerNewUser);
 
 router.post("/login", loginUser);
 
-router.post("/profile/myprofile-info", displayUserInformation);
+router.get("/profile/myprofile-info", displayUserInformation);
 
 router.post(
   "/profile/myprofile-personal-information",
