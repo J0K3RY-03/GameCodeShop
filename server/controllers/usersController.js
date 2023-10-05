@@ -156,7 +156,7 @@ const updateUserEmail = async (req, res) => {
   }
 };
 
-const updatePasswordEmail = async (req, res) => {
+const updateUserPassword = async (req, res) => {
   // Get token from cookies
   const token = req.cookies.access_token;
 
@@ -213,4 +213,5 @@ module.exports = {
   loginUser,
   updateUserPersonalInformation,
   updateUserEmail,
+  updateUserPassword,
 };

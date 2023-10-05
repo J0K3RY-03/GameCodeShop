@@ -5,6 +5,7 @@ const {
   loginUser,
   updateUserPersonalInformation,
   updateUserEmail,
+  // updateUserPassword,
 } = require("../controllers/usersController");
 // const { verifyToken } = require("../middlewares/authMiddleware");
 
@@ -19,6 +20,6 @@ router.post(
 
 router.post("/profile/myprofile-email", updateUserEmail);
 
-router.post("/profile/myprofile-password");
+router.post("/profile/myprofile-password", updateUserPassword);
 
 module.exports = router;
