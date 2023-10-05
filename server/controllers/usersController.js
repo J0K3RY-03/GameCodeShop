@@ -126,7 +126,7 @@ const updateUserEmail = async (req, res) => {
     const user = await UserModel.findOne({ _id: userID });
 
     if (user) {
-      const { email, password } = req.body;
+      const { email, confirmEmail, password } = req.body;
 
       // Check if password value input matches the one stored inside the DB
       const checkPassword = await bcrypt.compare(password, user.password);
@@ -135,6 +135,20 @@ const updateUserEmail = async (req, res) => {
         return res.status(401).json({
           message: "Password introduced is incorrect.",
         });
+      }
+
+      // Check if email and confirmEmail have same value
+      if (email !== confirmEmail) {
+        return res.status(401).json({ message: "Emails need to match." });
+      }
+
+      // Check if the new wanted email already exists in our DB
+      const checkIfEmailExists = await UserModel.findOne({ email });
+
+      if (checkIfEmailExists) {
+        return res
+          .status(401)
+          .json({ message: "Email introduced already belongs to an account." });
       }
 
       // Update user information
@@ -183,11 +197,11 @@ const updateUserPassword = async (req, res) => {
       // Check if password value input matches the one stored inside the DB
       // const checkPassword = await bcrypt.compare(password, user.password);
 
-      if (!checkPassword) {
-        return res.status(401).json({
-          message: "Password introduced is incorrect.",
-        });
-      }
+      // if (!checkPassword) {
+      //   return res.status(401).json({
+      //     message: "Password introduced is incorrect.",
+      //   });
+      // }
 
       // Update user information
       const userUpdate = await UserModel.updateOne(

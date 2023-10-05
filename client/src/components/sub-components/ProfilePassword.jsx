@@ -15,7 +15,7 @@ export const ProfilePassword = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/users/profile/myprofile-email",
+        "http://localhost:3000/users/profile/myprofile-password ",
         { password },
         { withCredentials: true }
       );

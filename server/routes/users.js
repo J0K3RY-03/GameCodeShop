@@ -5,7 +5,7 @@ const {
   loginUser,
   updateUserPersonalInformation,
   updateUserEmail,
-  // updateUserPassword,
+  updateUserPassword,
 } = require("../controllers/usersController");
 // const { verifyToken } = require("../middlewares/authMiddleware");
 

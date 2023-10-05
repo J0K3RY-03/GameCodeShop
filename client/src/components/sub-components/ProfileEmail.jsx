@@ -3,6 +3,7 @@ import axios from "axios";
 
 export const ProfileEmail = () => {
   const [email, setEmail] = useState("");
+  const [confirmEmail, setConfirmEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [errorDisplay, setErrorDisplay] = useState("none");
@@ -17,12 +18,14 @@ export const ProfileEmail = () => {
     try {
       const response = await axios.post(
         "http://localhost:3000/users/profile/myprofile-email",
-        { email, password },
+        { email, confirmEmail, password },
         { withCredentials: true }
       );
 
       console.log(response);
     } catch (error) {
+      setError(error.response.data.message);
+      setErrorDisplay("block");
       console.error(error);
     }
   };
@@ -40,9 +43,11 @@ export const ProfileEmail = () => {
 
         <input
           type="text"
-          id="email-confirmation"
-          name="email-confirmation"
+          id="confirmEmail"
+          name="confirmEmail"
+          value={confirmEmail}
           placeholder="Confirm your new email"
+          onChange={(event) => setConfirmEmail(event.target.value)}
         />
 
         <input
