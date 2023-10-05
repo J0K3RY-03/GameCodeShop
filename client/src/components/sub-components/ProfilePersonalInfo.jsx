@@ -1,20 +1,30 @@
 import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
 
 export const ProfilePersonalInfo = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const [username, setUsername] = useState("");
   const [error, setError] = useState("");
   const [errorDisplay, setErrorDisplay] = useState("none");
 
-  const onSubmit = (event) => {
+  const onSubmit = async (event) => {
     event.preventDefault();
 
     //Reset error handlers states
-    setError("none");
+    setErrorDisplay("none");
     setError("");
+
+    try {
+      const response = await axios.post(
+        "http://localhost:3000/users/profile/myprofile-personal-information",
+        { firstName, lastName },
+        { withCredentials: true }
+      );
+
+      console.log(response);
+    } catch (error) {
+      console.error(error);
+    }
   };
   return (
     <div className="userPersonalInformation">
@@ -35,15 +45,6 @@ export const ProfilePersonalInfo = () => {
           value={lastName}
           placeholder="Last name"
           onChange={(event) => setLastName(event.target.value)}
-        />
-
-        <input
-          type="string"
-          id="username"
-          name="username"
-          value={username}
-          placeholder="Username"
-          onChange={(event) => setUsername(event.target.value)}
         />
 
         <div

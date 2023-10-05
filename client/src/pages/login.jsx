@@ -28,12 +28,10 @@ export const Login = () => {
         password,
       });
 
-      if (response.data.username) {
+      if (response.data.userID) {
         // Store token and user ID
         setCookies("access_token", response.data.token);
-        window.localStorage.setItem("userID", response.data.userID);
-        //Check if the user name is being printed
-        console.log(response.data.userID);
+
         // At this point the user is logged in and should be redirected to Home page
         navigate("/");
       } else if (response.data.message !== "You logged in!") {

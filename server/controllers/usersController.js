@@ -1,7 +1,6 @@
 const UserModel = require("../models/userModel");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const cookieParser = require("cookie-parser");
 require("dotenv").config();
 
 const registerNewUser = async (req, res) => {
@@ -55,19 +54,163 @@ const loginUser = async (req, res) => {
     });
   }
 
-  const username = { username: user.username };
+  const userID = { id: user._id };
 
-  const token = jwt.sign(username, process.env.ACCESS_TOKEN_SECRET);
+  const token = jwt.sign(userID, process.env.ACCESS_TOKEN_SECRET);
 
   res.json({
     token,
-    userID: user._id,
     message: "You logged in!",
-    username,
+    userID,
   });
+};
+
+const updateUserPersonalInformation = async (req, res) => {
+  // Get token from cookies
+  const token = req.cookies.access_token;
+
+  if (!token) {
+    return res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+
+  // Verify JWT token
+  try {
+    const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    //Get the User ID from the token
+    const userID = decodedToken.id;
+
+    const user = UserModel.findOne({ _id: userID });
+
+    if (user) {
+      const { firstName, lastName } = req.body;
+
+      // Update user information
+      const user = await UserModel.updateOne(
+        { _id: userID },
+        { $set: { firstName, lastName } }
+      );
+
+      res.json({ firstName, lastName, userID });
+    } else {
+      res
+        .status(401)
+        .json({ message: "There's been an error. Log in again, please." });
+    }
+  } catch (error) {
+    res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+};
+
+const updateUserEmail = async (req, res) => {
+  // Get token from cookies
+  const token = req.cookies.access_token;
+
+  if (!token) {
+    return res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+
+  // Verify JWT token
+  try {
+    const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    //Get the User ID from the token
+    const userID = decodedToken.id;
+
+    const user = await UserModel.findOne({ _id: userID });
+
+    if (user) {
+      const { email, password } = req.body;
+
+      // Check if password value input matches the one stored inside the DB
+      const checkPassword = await bcrypt.compare(password, user.password);
+
+      if (!checkPassword) {
+        return res.status(401).json({
+          message: "Password introduced is incorrect.",
+        });
+      }
+
+      // Update user information
+      const userUpdate = await UserModel.updateOne(
+        { _id: userID },
+        { $set: { email } }
+      );
+
+      res.json({ email, userID });
+    } else {
+      res
+        .status(401)
+        .json({ message: "There's been an error. Log in again, please." });
+    }
+  } catch (error) {
+    res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+};
+
+const updatePasswordEmail = async (req, res) => {
+  // Get token from cookies
+  const token = req.cookies.access_token;
+
+  if (!token) {
+    return res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
+
+  // Verify JWT token
+  try {
+    const decodedToken = jwt.verify(token, process.env.ACCESS_TOKEN_SECRET);
+
+    //Get the User ID from the token
+    const userID = decodedToken.id;
+
+    const user = await UserModel.findOne({ _id: userID });
+
+    if (user) {
+      const { password } = req.body;
+
+      const hashedPassword = await bcrypt.hash(password, 10);
+
+      // Check if password value input matches the one stored inside the DB
+      // const checkPassword = await bcrypt.compare(password, user.password);
+
+      if (!checkPassword) {
+        return res.status(401).json({
+          message: "Password introduced is incorrect.",
+        });
+      }
+
+      // Update user information
+      const userUpdate = await UserModel.updateOne(
+        { _id: userID },
+        { $set: { password: hashedPassword } }
+      );
+
+      res.json({ message: "password modified", userID });
+    } else {
+      res
+        .status(401)
+        .json({ message: "There's been an error. Log in again, please." });
+    }
+  } catch (error) {
+    res
+      .status(401)
+      .json({ message: "You don't have permission, please log in!" });
+  }
 };
 
 module.exports = {
   registerNewUser,
   loginUser,
+  updateUserPersonalInformation,
+  updateUserEmail,
 };
