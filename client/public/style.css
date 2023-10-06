@@ -115,13 +115,11 @@ body {
 
 .search_on {
   background-color: var(--color-red) !important;
-  width: 600px;
 }
 
 .nav_container_all_plateformes {
   position: relative;
-  gap: 50px;
-  padding: 0 0 0 30px;
+  gap: 2rem;
   background-color: rgba(135, 135, 135, 0.1);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -129,15 +127,12 @@ body {
   display: flex;
   align-items: center;
   height: 4.2rem;
-  justify-content: space-around;
+  justify-content: center;
   color: white;
+  padding: 1rem;
 }
 .nav_container_all_plateformes a {
   color: white;
-  margin-right: 0.5rem;
-}
-.nav_container_all_plateformes .nav_ico {
-  margin-right: 0.5rem;
 }
 .nav_container_all_plateformes .nav_nintendo_section {
   display: flex;
@@ -151,10 +146,10 @@ body {
   max-width: 100%;
 }
 .nav_container_all_plateformes .nav_plateformes_search {
-  border-radius: 50px;
+  border-radius: 50%;
   background: var(--color-red);
   height: inherit;
-  width: 4.2rem;
+  width: 4.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -214,25 +209,24 @@ body {
 }
 .header_home .header-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   position: absolute;
   top: 0;
   width: 100%;
-  padding: 30px;
   z-index: 4;
+  padding: 2rem 0rem 0rem 0rem;
 }
 .header_home .logo_gcs {
-  padding-left: 1rem;
   color: white;
 }
 .header_home .container_header_log_card {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
 }
 .header_home .container_header_log_card a {
-  padding-right: 1rem;
   color: white;
 }
 .header_home .container_header_log_card a i {
@@ -245,6 +239,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
+}
+.header_home .userConnected-menu a i {
+  display: flex;
+  gap: 0.5rem;
 }
 .header_home .userConnected-menu svg {
   height: 1.5rem;
@@ -487,8 +486,70 @@ body {
   font-size: 1.1rem;
   letter-spacing: 0.05rem;
 }
+.profile-user-information .display-userInformation {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile-user-information .display-userInformation .personalInformation {
+  display: flex;
+  width: 80%;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.profile-user-information .display-userInformation .personalInformation .user-firstName,
+.profile-user-information .display-userInformation .personalInformation .user-lastName,
+.profile-user-information .display-userInformation .personalInformation .user-username,
+.profile-user-information .display-userInformation .personalInformation .user-email,
+.profile-user-information .display-userInformation .personalInformation .user-password {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.profile-user-information .display-userInformation .personalInformation .user-firstName .static,
+.profile-user-information .display-userInformation .personalInformation .user-lastName .static,
+.profile-user-information .display-userInformation .personalInformation .user-username .static,
+.profile-user-information .display-userInformation .personalInformation .user-email .static,
+.profile-user-information .display-userInformation .personalInformation .user-password .static {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.profile-user-information .display-userInformation .personalInformation .user-firstName .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-lastName .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-username .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-email .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-password .dynamic {
+  color: rgb(122, 122, 122);
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+.profile-user-information .display-userInformation .user-date-and-username {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.profile-user-information .display-userInformation .user-date-and-username .user-username {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.profile-user-information .display-userInformation .user-date-and-username .user-date {
+  font-size: 1.3rem;
+  color: rgb(120, 120, 120);
+  font-weight: bold;
+}
 .profile-user-information .userPersonalInformation,
-.profile-user-information .display-userInformation,
 .profile-user-information .userEmail,
 .profile-user-information .userPassword {
   width: 75%;
@@ -499,13 +560,11 @@ body {
   gap: 3rem;
 }
 .profile-user-information .userPersonalInformation h1,
-.profile-user-information .display-userInformation h1,
 .profile-user-information .userEmail h1,
 .profile-user-information .userPassword h1 {
   color: white;
 }
 .profile-user-information .userPersonalInformation form,
-.profile-user-information .display-userInformation form,
 .profile-user-information .userEmail form,
 .profile-user-information .userPassword form {
   width: 50%;

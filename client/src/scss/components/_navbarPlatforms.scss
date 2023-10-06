@@ -1,65 +1,50 @@
+.search_on {
+  background-color: var(--color-red) !important;
+}
 
-  .search_on {
-    background-color: var(--color-red) !important;
-    width: 600px;
+.nav_container_all_plateformes {
+  position: relative;
+  gap: 2rem;
+  background-color: rgba(135, 135, 135, 0.1);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  height: 4.2rem;
+  justify-content: center;
+  color: white;
+  padding: 1rem;
+  a {
+    color: white;
   }
 
-  .nav_container_all_plateformes {
-    position: relative;
-    gap: 50px;
-    padding: 0 0 0 30px;
-    background-color: rgba(135, 135, 135, 0.1);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border-radius: 50px;
+  .nav_nintendo_section {
     display: flex;
     align-items: center;
-    height: 4.2rem;
-    justify-content: space-around;
-    color: white;
-
-    a {
-      color: white;
-      margin-right: 0.5rem;
-    }
-
-    .nav_container_section {
-
-    }
-
-    .nav_ico {
-      margin-right: 0.5rem;
-    }
-
-    .nav_nintendo_section {
-      display: flex;
-      align-items: center;
-      .nintendo_img_container {
-        height: 16px;
-        width: 16px;
-
-        img{
-          max-width: 100%;
-        }
-      }
-    }
-    .nav_plateformes_search {
-      border-radius: 50px;
-      background: var(--color-red);
-      height: inherit;
-      width: 4.2rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-
-      &:hover > .gcs_search_nav {
-        transition: .2s ease-in-out;
-        transform: scale(1.4);
+    .nintendo_img_container {
+      height: 16px;
+      width: 16px;
+      img {
+        max-width: 100%;
       }
     }
   }
-
+  .nav_plateformes_search {
+    border-radius: 50%;
+    background: var(--color-red);
+    height: inherit;
+    width: 4.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover > .gcs_search_nav {
+      transition: 0.2s ease-in-out;
+      transform: scale(1.4);
+    }
+  }
+}
 
 .nav_form_search {
   width: 100%;
@@ -67,7 +52,6 @@
   display: flex;
   align-items: center;
   padding: 1rem;
-
 
   .nav_input_search {
     border: none;
@@ -97,6 +81,6 @@
   &:hover {
     color: var(--color-red);
     cursor: pointer;
-    transform: scale(1.30);
+    transform: scale(1.3);
   }
 }

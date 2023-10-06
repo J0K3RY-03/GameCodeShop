@@ -1,26 +1,28 @@
 .header_home {
-
   .header-nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     position: absolute;
     top: 0;
     width: 100%;
-    padding: 30px;
     z-index: 4;
+    padding: 2rem 0rem 0rem 0rem;
   }
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgb(0,0,0);
-  background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 30%);
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 30%
+  );
   height: 60vh;
   width: 100%;
 
   .logo_gcs {
-    padding-left: 1rem;
     color: white;
   }
 
@@ -28,13 +30,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 2rem;
     a {
-      padding-right: 1rem;
       color: white;
-
       i {
         font-size: 1.5rem;
-
         &:hover {
           color: var(--color-red);
         }
@@ -46,6 +46,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 2rem;
+    a {
+      i {
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
     svg {
       height: 1.5rem;
       fill: white;

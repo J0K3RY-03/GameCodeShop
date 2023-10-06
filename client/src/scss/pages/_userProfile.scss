@@ -82,8 +82,62 @@
       }
     }
   }
+  .display-userInformation {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .personalInformation {
+      display: flex;
+      width: 80%;
+      gap: 3rem;
+      align-items: center;
+      justify-content: center;
+      .user-firstName,
+      .user-lastName,
+      .user-username,
+      .user-email,
+      .user-password {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        .static {
+          color: white;
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+        .dynamic {
+          color: rgb(122, 122, 122);
+          font-weight: bold;
+          font-size: 1.5rem;
+          letter-spacing: 0.15rem;
+        }
+      }
+    }
+    .user-date-and-username {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      .user-username {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .user-date {
+        font-size: 1.3rem;
+        color: rgb(120, 120, 120);
+        font-weight: bold;
+      }
+    }
+  }
   .userPersonalInformation,
-  .display-userInformation,
   .userEmail,
   .userPassword {
     width: 75%;

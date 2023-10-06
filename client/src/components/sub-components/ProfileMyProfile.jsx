@@ -34,19 +34,29 @@ export const ProfileMyProfile = () => {
 
   return (
     <div className="display-userInformation">
-      <h1>Welcome to your profile, {username}!</h1>
       <div className="user-date-and-username">
-        <p>{username}</p>
-        <p>Member since: {memberSince}</p>
+        <p className="user-username">{username}</p>
+        <p className="user-date">Member since: {memberSince}</p>
       </div>
-      <div className="personalInformation-names"></div>
-      <div className="personalInformation-email"></div>
-      <div className="personalInformation-username"></div>
+      <div className="personalInformation">
+        <div className="user-firstName">
+          <p className="static">First name</p>
+          <p className="dynamic">{userFirstName}</p>
+        </div>
+        <div className="user-lastName">
+          <p className="static">Last name</p>
+          <p className="dynamic">{userLastName}</p>
+        </div>
 
-      <p>{userFirstName}</p>
-      <p>{userLastName}</p>
-      <p>{userEmail}</p>
-      <p>{username}</p>
+        <div className="user-username">
+          <p className="static">Username</p>
+          <p className="dynamic">{username}</p>
+        </div>
+        <div className="user-email">
+          <p className="static">Email</p>
+          <p className="dynamic">{userEmail}</p>
+        </div>
+      </div>
     </div>
   );
 };
