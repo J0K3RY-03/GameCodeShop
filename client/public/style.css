@@ -484,6 +484,57 @@ body {
   justify-content: center;
 }
 
+.section_game_homepage {
+  max-width: 1400px;
+  margin: auto;
+  padding: 6rem 0;
+}
+.section_game_homepage h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+.section_game_homepage .container_card_game_homepage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6rem;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage {
+  max-width: 300px;
+  max-height: 500px;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage h3 {
+  margin-bottom: 0.5rem;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage {
+  max-width: 300px;
+  max-height: 450px;
+  margin-bottom: 1rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage:hover {
+  transform: scale(1.05);
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_name_price_game_home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_name_price_game_home p {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-red);
+}
+
 footer {
   background-color: var(--color-ultra-dark);
   width: 100%;

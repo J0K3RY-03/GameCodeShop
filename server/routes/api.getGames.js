@@ -18,7 +18,8 @@ router.get('/getgame/:name', async (req, res) => {
                 'Authorization': `Bearer ${accessToken}`,
             },
              data: `search "${gameName}"; 
-             fields name,release_dates,summary,cover,category; limit 5;`,
+             fields name,release_dates,summary,cover,category; 
+             where category = 0 & name = "${gameName}";`,
         });
 
         const games = response.data;
