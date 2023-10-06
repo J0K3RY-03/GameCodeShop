@@ -28,6 +28,7 @@ export const ProfilePersonalInfo = () => {
   };
   return (
     <div className="userPersonalInformation">
+      <h1>Change your personal information</h1>
       <form className="loginAndRegister-form" onSubmit={onSubmit}>
         <input
           type="string"

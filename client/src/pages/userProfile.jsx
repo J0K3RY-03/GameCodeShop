@@ -13,10 +13,6 @@ export const UserProfile = () => {
 
   return (
     <div className="profile-contentContainer">
-      <div className="nickname-creationDate">
-        <p>User Nickname</p>
-        <p>Member since:</p>
-      </div>
       <ul className="profile-navbar">
         <li
           className={activeLi === "profile" ? "active" : ""}

@@ -33,6 +33,7 @@ export const ProfilePassword = () => {
   };
   return (
     <div className="userPassword">
+      <h1>Change your account password</h1>
       <form className="loginAndRegister-form" onSubmit={onSubmit}>
         <input
           type="password"

@@ -410,6 +410,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 5rem 0rem;
 }
 
 .profile-navbar {
@@ -417,10 +418,10 @@ body {
   display: flex;
   gap: 1.5rem;
   width: 80%;
-  border-bottom: 1.5px solid grey;
+  border-bottom: 3px solid grey;
 }
 .profile-navbar li {
-  font-size: 1.3rem;
+  font-size: 2rem;
   color: white;
   font-weight: bold;
   border: none;
@@ -441,15 +442,16 @@ body {
   width: 80%;
 }
 .profile-user-information ul {
-  width: 20%;
+  width: 25%;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
-  border-right: 2px solid grey;
+  gap: 3rem;
+  padding-right: 2rem;
+  border-right: 3px solid grey;
 }
 .profile-user-information ul li {
   display: flex;
-  gap: 1.5rem;
+  gap: 3rem;
   align-items: center;
 }
 .profile-user-information ul li:hover {
@@ -457,14 +459,23 @@ body {
 }
 .profile-user-information ul li:hover .profileInformation-li-big {
   color: var(--color-red);
+  fill: var(--color-red);
 }
 .profile-user-information ul li svg {
-  height: 1.2rem;
+  height: 2rem;
+  fill: white;
+}
+.profile-user-information ul li svg.active {
   fill: var(--color-red);
+}
+.profile-user-information ul li .profileInformation-li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
 }
 .profile-user-information ul li .profileInformation-li-big {
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 }
 .profile-user-information ul li .profileInformation-li-big.active {
@@ -473,14 +484,33 @@ body {
 .profile-user-information ul li .profileInformation-li-small {
   color: grey;
   font-weight: bold;
+  font-size: 1.1rem;
   letter-spacing: 0.05rem;
 }
 .profile-user-information .userPersonalInformation,
 .profile-user-information .display-userInformation,
 .profile-user-information .userEmail,
 .profile-user-information .userPassword {
-  width: 80%;
+  width: 75%;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.profile-user-information .userPersonalInformation h1,
+.profile-user-information .display-userInformation h1,
+.profile-user-information .userEmail h1,
+.profile-user-information .userPassword h1 {
+  color: white;
+}
+.profile-user-information .userPersonalInformation form,
+.profile-user-information .display-userInformation form,
+.profile-user-information .userEmail form,
+.profile-user-information .userPassword form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
 }
 
@@ -493,7 +523,7 @@ footer {
 }
 
 .footer-container {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
