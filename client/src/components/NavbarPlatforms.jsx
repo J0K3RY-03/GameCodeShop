@@ -1,4 +1,3 @@
-import nintendo from "../../public/assets/nintendo.png";
 import { useState } from "react";
 
 export const NavbarPlateformes = () => {
@@ -31,7 +30,7 @@ export const NavbarPlateformes = () => {
             href={"#"}
           >
             <div className={"nintendo_img_container nav_ico"}>
-              <img src={nintendo} alt="nintendo" />
+              <i className="fa-solid fa-gamepad"></i>
             </div>
             <span>Nintendo</span>
           </a>
@@ -66,9 +65,9 @@ export const NavbarPlateformes = () => {
   };
 
   return (
-      <div className={`${style} nav_container_all_plateformes`}>
-        {renderContent()}
-      </div>
+    <div className={`${style} nav_container_all_plateformes`}>
+      {renderContent()}
+    </div>
   );
 };
 

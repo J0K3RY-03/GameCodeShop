@@ -3,33 +3,33 @@
 }
 
 .nav_container_all_plateformes {
+  width: 592.97px;
   position: relative;
   gap: 2rem;
   background-color: rgba(135, 135, 135, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   border-radius: 50px;
   display: flex;
   align-items: center;
   height: 4.2rem;
   justify-content: center;
   color: white;
-  padding: 1rem;
-  a {
-    color: white;
-  }
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 
-  .nav_nintendo_section {
+  .nav_container_section {
+    text-decoration: none;
     display: flex;
     align-items: center;
-    .nintendo_img_container {
-      height: 16px;
-      width: 16px;
-      img {
-        max-width: 100%;
-      }
+    justify-content: center;
+    gap: 0.2rem;
+    color: white;
+    font-weight: bold;
+    font-size: 1.3rem;
+    &:hover {
+      color: var(--color-red);
+      cursor: pointer;
     }
   }
+
   .nav_plateformes_search {
     border-radius: 50%;
     background: var(--color-red);
@@ -40,8 +40,9 @@
     align-items: center;
     cursor: pointer;
     &:hover > .gcs_search_nav {
+      color: white !important;
       transition: 0.2s ease-in-out;
-      transform: scale(1.4);
+      transform: scale(1.3);
     }
   }
 }
@@ -60,22 +61,25 @@
     color: white;
     font-size: 1rem;
     font-weight: 400;
-    width: 80%;
+    width: 60%;
     padding-left: 0.5rem;
+    font-weight: bold;
   }
   ::placeholder {
     color: white;
+    font-weight: bold;
   }
 }
 
 .nav_advanced_search {
-  font-size: 0.9rem;
-  font-weight: 100;
-  width: 30%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  width: 40%;
 }
 
 .nav_plateformes_search_exit {
   position: absolute;
+  font-size: 1.3rem;
   right: -25px;
 
   &:hover {
