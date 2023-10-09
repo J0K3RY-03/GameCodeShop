@@ -8,7 +8,7 @@ import { Login } from "./pages/login";
 import { Register } from "./pages/register";
 import { Home } from "./pages/home";
 import { UserProfile } from "./pages/userProfile";
-import Cart from "./pages/cart";
+import Cart from "./pages/cart"
 
 function App() {
   // // Current location

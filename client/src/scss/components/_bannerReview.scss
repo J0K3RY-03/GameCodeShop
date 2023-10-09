@@ -1,0 +1,78 @@
+.container_banner_review {
+  display: flex;
+  width: 100%;
+  background: var(--color-ultra-dark);
+  color: var(--color-light-grey);
+  justify-content: center;
+  height: 170px;
+
+  .list_banner_review {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    flex: 1;
+
+    .separator_banner_review {
+      height: 80px;
+      width: 2px;
+      background: var(--color-light-dark);
+    }
+
+    .item_banner_review {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+
+      i {
+        font-size: 2rem;
+        color: var(--color-red);
+      }
+
+      .container_content_banner_review {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.3rem;
+
+        h3 {
+          font-size: 1.5rem;
+          color: var(--color-white);
+        }
+      }
+
+      .banner_review_trust {
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        align-items: center;
+
+        .container_star_trustpilot {
+          display: flex;
+          gap: 0.5rem;
+          margin-bottom: 0.5rem;
+          align-items: center;
+
+          span {
+            font-size: 1.2rem;
+            color: var(--color-white);
+          }
+        }
+
+        .trust_star {
+          font-size: 2rem;
+
+        }
+
+        i {
+          font-size: 1rem;
+        }
+
+        .content_trust_banner-review {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

@@ -8,6 +8,7 @@ function GameForm() {
     selectedTags: [],
   });
   const [tags, setTags] = useState([]);
+  const [isFormValid, setIsFormValid] = useState(true);
 
   useEffect(() => {
     fetch("http://localhost:3000/api/tags")
@@ -43,19 +44,24 @@ function GameForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!formData.name || !formData.price || !formData.stock) {
+      setIsFormValid(false);
+      return;
+    }
     try {
-      const response = await fetch("http://localhost:3000/api/submit/game", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        console.log("Données soumises avec succès !");
-      } else {
-        console.error("Erreur lors de la soumission des données.");
-      }
+        const response = await fetch("http://localhost:3000/api/submit/game", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+        if (response.ok) {
+          console.log("Données soumises avec succès !");
+        } else {
+          console.error("Erreur lors de la soumission des données.");
+        }
     } catch (error) {
       console.error("Erreur inattendue :", error);
     }
@@ -65,6 +71,9 @@ function GameForm() {
       <div className={'container_newGame_page'}>
         <div className={'container_newGame_Form'}>
           <form className={'form_newGame'} onSubmit={handleSubmit}>
+            {isFormValid ? null : (
+                <p className={'error_input_not_valid'}>Tous les champs doivent être rempli.</p>
+            )}
             <input
                 id='name'
                 type="text"

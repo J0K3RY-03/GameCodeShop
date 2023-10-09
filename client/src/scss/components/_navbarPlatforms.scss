@@ -53,9 +53,12 @@
 }
 
 .nav_form_search {
+  width: 100%;
   height: inherit;
   display: flex;
   align-items: center;
+  padding: 1rem;
+
 
   .nav_input_search {
     border: none;
@@ -64,7 +67,6 @@
     color: white;
     font-size: 1rem;
     font-weight: 400;
-
     font-weight: bold;
   }
   ::placeholder {
@@ -76,7 +78,6 @@
 .nav_advanced_search {
   font-size: 1.1rem;
   font-weight: bold;
-
   color: white;
 }
 
