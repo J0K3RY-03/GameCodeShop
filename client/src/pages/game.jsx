@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import header from "../components/Header.jsx";
+import BannerReview from "../components/BannerReview.jsx";
 
 const Game = () => {
     const [dataGame, setDataGame] = useState([]);
@@ -59,6 +60,7 @@ const Game = () => {
     const allPossiblePaths = ['t_thumb', 't_cover_small', 't_screenshot_med', 't_logo_med', 't_screenshot_huge', 't_micro', 't_720p', 't_1080p'];
 
     return (
+        <>
         <div className={"section_game_homepage"}>
             <h2>Liste des jeux</h2>
             <ul className={"container_card_game_homepage"} style={{ color: "white" }}>
@@ -89,7 +91,8 @@ const Game = () => {
                 })}
             </ul>
         </div>
-
+            <BannerReview/>
+        </>
     );
 };
 

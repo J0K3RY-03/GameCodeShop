@@ -24,7 +24,13 @@
     }
 
     .nav_container_section {
-
+      span {
+        font-size: 1.2rem;
+        font-weight: 500;
+        &:hover {
+          color: var(--color-red);
+        }
+      }
     }
 
     .nav_ico {

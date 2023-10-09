@@ -18,6 +18,16 @@
       width: 40rem;
       border-radius: 10px;
 
+      .error_input_not_valid {
+        padding: 0.8rem;
+        background: rgba(167, 0, 0, 0.2);
+        border-radius: 10px;
+        border: 0.5px solid var(--color-light-grey);
+        color: var(--color-red);
+        margin-bottom: 1rem;
+        width: 20rem;
+      }
+
       input {
         background: var(--color-ultra-dark);
         padding: 0.5rem 0.5rem 0.5rem 1rem;
