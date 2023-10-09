@@ -24,7 +24,7 @@
 
   .logo_gcs {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
   }
 
@@ -53,10 +53,11 @@
       i {
         display: flex;
         gap: 0.5rem;
+        font-size: 1.2rem;
       }
     }
     svg {
-      height: 1.5rem;
+      height: 1.3rem;
       fill: white;
       &:hover {
         cursor: pointer;
@@ -87,7 +88,7 @@
   align-items: center;
   .logo_gcs {
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: white;
   }
 
@@ -99,7 +100,7 @@
     a {
       color: white;
       i {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         &:hover {
           color: var(--color-red);
         }
@@ -119,7 +120,7 @@
       }
     }
     svg {
-      height: 1.5rem;
+      height: 1.3rem;
       fill: white;
       &:hover {
         cursor: pointer;

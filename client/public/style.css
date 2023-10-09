@@ -115,14 +115,19 @@ body {
 
 .search_on {
   background-color: var(--color-red) !important;
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center;
+  width: 100%;
 }
 
 .nav_container_all_plateformes {
-  width: 592.97px;
+  width: 580px;
   position: relative;
   gap: 2rem;
   background-color: rgba(135, 135, 135, 0.1);
   border-radius: 50px;
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   height: 4.2rem;
@@ -135,10 +140,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.2rem;
+  gap: 0.5rem;
   color: white;
   font-weight: bold;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 .nav_container_all_plateformes .nav_container_section:hover {
   color: var(--color-red);
@@ -161,11 +166,9 @@ body {
 }
 
 .nav_form_search {
-  width: 100%;
   height: inherit;
   display: flex;
   align-items: center;
-  padding: 1rem;
 }
 .nav_form_search .nav_input_search {
   border: none;
@@ -174,8 +177,6 @@ body {
   color: white;
   font-size: 1rem;
   font-weight: 400;
-  width: 60%;
-  padding-left: 0.5rem;
   font-weight: bold;
 }
 .nav_form_search ::placeholder {
@@ -186,7 +187,7 @@ body {
 .nav_advanced_search {
   font-size: 1.1rem;
   font-weight: bold;
-  width: 40%;
+  color: white;
 }
 
 .nav_plateformes_search_exit {
@@ -222,7 +223,7 @@ body {
 }
 .header_home .logo_gcs {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 .header_home .container_header_log_card {
@@ -249,9 +250,10 @@ body {
 .header_home .userConnected-menu a i {
   display: flex;
   gap: 0.5rem;
+  font-size: 1.2rem;
 }
 .header_home .userConnected-menu svg {
-  height: 1.5rem;
+  height: 1.3rem;
   fill: white;
 }
 .header_home .userConnected-menu svg:hover {
@@ -280,7 +282,7 @@ body {
 }
 .header_second .logo_gcs {
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
 }
 .header_second .container_header_log_card {
@@ -293,7 +295,7 @@ body {
   color: white;
 }
 .header_second .container_header_log_card a i {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 .header_second .container_header_log_card a i:hover {
   color: var(--color-red);
@@ -309,7 +311,7 @@ body {
   gap: 0.5rem;
 }
 .header_second .userConnected-menu svg {
-  height: 1.5rem;
+  height: 1.3rem;
   fill: white;
 }
 .header_second .userConnected-menu svg:hover {
