@@ -5,13 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6715f7-7a2b-4bcc-acea-6ec138ffa62b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/GameCodeShop.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/public/assets/img_game_page.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/StockComposant.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/pages/GamePage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/components/_stockComposant.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/pages/_gamePage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/pages/game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/game.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api.getCoverGame.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api.getCoverGame.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/api.getGames.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api.getGames.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/style.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/jake" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/jake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodemon" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodemon" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nopt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/semver" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,24 +60,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;jason&quot;,
-    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;18.17.1&quot;,
-    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;18.17.1&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/joker/Desktop/Projets Perso&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\joker\\AppData\\Local\\Programs\\PhpStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "jason",
+    "javascript.nodejs.core.library.configured.version": "18.18.0",
+    "javascript.nodejs.core.library.typings.version": "18.18.0",
+    "last_opened_file_path": "C:/Users/joker/Desktop/Projets Perso",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Users\\joker\\AppData\\Local\\Programs\\PhpStorm\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\joker\Desktop\BeCode\GameCodeShop\client\src\components" />
@@ -91,12 +104,7 @@
       <workItem from="1695732945888" duration="6726000" />
       <workItem from="1695979861535" duration="11320000" />
       <workItem from="1696258742589" duration="63000" />
-      <workItem from="1696405821529" duration="16928000" />
-      <workItem from="1696490118585" duration="19237000" />
-      <workItem from="1696575751741" duration="18897000" />
-      <workItem from="1696621594856" duration="583000" />
-      <workItem from="1696836976959" duration="11638000" />
-      <workItem from="1696883415738" duration="596000" />
+      <workItem from="1696942345697" duration="8665000" />
     </task>
     <servers />
   </component>

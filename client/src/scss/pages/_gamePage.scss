@@ -1,0 +1,110 @@
+.container_main_game_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-white);
+  padding: 5rem;
+  .section_game_page {
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5rem;
+
+    .container_img_game_page {
+      overflow: hidden;
+      border-radius: 10px;
+      img {
+        max-width: 100%;
+        display: block;
+      }
+    }
+
+    .container_content_buy_game_page {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: var(--color-light-dark);
+      backdrop-filter: blur(60px);
+      padding: 1.5rem;
+      gap: 1.6rem;
+      height: 100%;
+
+      h2 {
+        font-size: 1.8rem;
+      }
+
+      .price_content_buy_game_page {
+        font-size: 2.5rem;
+      }
+
+      .container_button_buy_game_page {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+
+        .cart_buy_game_page {
+          padding: 1rem 2rem;
+          background: var(--color-red);
+          color: white;
+          border-radius: 5px;
+
+          &:hover {
+            cursor: pointer;
+            background: var(--color-red-hover);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+
+        .buy_game_page {
+          padding: 1rem 2rem;
+          background: var(--color-red);
+          color: white;
+          border-radius: 5px;
+
+          &:hover {
+            cursor: pointer;
+            background: var(--color-red-hover);
+            transition: all 0.2s ease-in-out;
+          }
+        }
+      }
+    }
+
+    .container_about_game_page {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      p {
+        color: var(--color-light-grey);
+      }
+
+      span {
+        color: var(--color-light-grey);
+      }
+    }
+  }
+
+  .container_game_info_game_page {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .content_game_info {
+      display: table-row;
+
+      .content_left_game_info_buy_page {
+        display: table-cell;
+        white-space: nowrap;
+        padding-right: 3rem;
+      }
+
+      p {
+        display: table-cell;
+      }
+    }
+  }
+}

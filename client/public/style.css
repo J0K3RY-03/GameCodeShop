@@ -761,6 +761,128 @@ body {
   flex-direction: column;
 }
 
+.container_main_game_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-white);
+  padding: 5rem;
+}
+.container_main_game_page .section_game_page {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 5rem;
+}
+.container_main_game_page .section_game_page .container_img_game_page {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.container_main_game_page .section_game_page .container_img_game_page img {
+  max-width: 100%;
+  display: block;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--color-light-dark);
+  backdrop-filter: blur(60px);
+  padding: 1.5rem;
+  gap: 1.6rem;
+  height: 100%;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page h2 {
+  font-size: 1.8rem;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page .price_content_buy_game_page {
+  font-size: 2.5rem;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .cart_buy_game_page {
+  padding: 1rem 2rem;
+  background: var(--color-red);
+  color: white;
+  border-radius: 5px;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .cart_buy_game_page:hover {
+  cursor: pointer;
+  background: var(--color-red-hover);
+  transition: all 0.2s ease-in-out;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .buy_game_page {
+  padding: 1rem 2rem;
+  background: var(--color-red);
+  color: white;
+  border-radius: 5px;
+}
+.container_main_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .buy_game_page:hover {
+  cursor: pointer;
+  background: var(--color-red-hover);
+  transition: all 0.2s ease-in-out;
+}
+.container_main_game_page .section_game_page .container_about_game_page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container_main_game_page .section_game_page .container_about_game_page p {
+  color: var(--color-light-grey);
+}
+.container_main_game_page .section_game_page .container_about_game_page span {
+  color: var(--color-light-grey);
+}
+.container_main_game_page .container_game_info_game_page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container_main_game_page .container_game_info_game_page .content_game_info {
+  display: table-row;
+}
+.container_main_game_page .container_game_info_game_page .content_game_info .content_left_game_info_buy_page {
+  display: table-cell;
+  white-space: nowrap;
+  padding-right: 3rem;
+}
+.container_main_game_page .container_game_info_game_page .content_game_info p {
+  display: table-cell;
+}
+
+.container_content_stock_buy_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 30px;
+  background: var(--color-medium-dark);
+  padding: 0.6rem 1.5rem;
+}
+.container_content_stock_buy_page li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+}
+.container_content_stock_buy_page li:first-child i {
+  color: red;
+}
+.container_content_stock_buy_page li .fa-check {
+  color: green;
+}
+.container_content_stock_buy_page .separator_stock_game_page {
+  width: 2px;
+  height: 25px;
+  background: var(--color-light-dark);
+}
+
 footer {
   background-color: var(--color-ultra-dark);
   width: 100%;
