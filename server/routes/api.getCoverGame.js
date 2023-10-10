@@ -2,9 +2,9 @@ const axios = require('axios');
 const express = require('express');
 const router = express.Router();
 
-const apiKey = 'puhhutxn965fly2yj9k5fhinuljumu';
-const accessToken = '7n0l4nc38d39uq636essk3qtijrzcg'
-const apiUrl = 'https://api.igdb.com/v4/';
+const apiKey = process.env.GAMES_API_CLIENT_ID;
+const accessToken = process.env.GAMES_API_CLIENT_SECRET_TOKEN;
+const apiUrl = process.env.GAMES_API;
 
 router.get('/getcover/:id', async (req, res) => {
     const gameIdGame = req.params.id;

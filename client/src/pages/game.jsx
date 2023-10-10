@@ -61,36 +61,36 @@ const Game = () => {
 
     return (
         <>
-        <div className={"section_game_homepage"}>
-            <h2>Liste des jeux</h2>
-            <ul className={"container_card_game_homepage"} style={{ color: "white" }}>
-                {dataGame.map((item, index) => {
-                    if (item.category === 0) {
-                        const originalUrl = dataCover[index]?.[0]?.url;
-                        let modifiedUrl = originalUrl;
+            <div className={"section_game_homepage"}>
+                <h2>Liste des jeux</h2>
+                <ul className={"container_card_game_homepage"} style={{ color: "white" }}>
+                    {dataGame.map((item, index) => {
+                        if (item.category === 0) {
+                            const originalUrl = dataCover[index]?.[0]?.url;
+                            let modifiedUrl = originalUrl;
 
-                        allPossiblePaths.forEach(path => {
-                            if (originalUrl && originalUrl.includes(path)) {
-                                modifiedUrl = modifiedUrl.replace(path, 't_cover_big');
-                            }
-                        });
+                            allPossiblePaths.forEach(path => {
+                                if (originalUrl && originalUrl.includes(path)) {
+                                    modifiedUrl = modifiedUrl.replace(path, 't_cover_big');
+                                }
+                            });
 
-                        return (
-                            <li className={"card_game_item_homepage"} key={item._id}>
-                                <div className={"container_card_game_img_homepage"}>
-                                    <img src={modifiedUrl} alt={item.name} />
-                                </div>
-                                <div className={'container_name_price_game_home'}>
-                                    <h3>{item.name}</h3>
-                                    <p>{item.price}€</p>
-                                </div>
-                            </li>
-                        );
-                    }
-                    return null;
-                })}
-            </ul>
-        </div>
+                            return (
+                                <li className={"card_game_item_homepage"} key={item._id}>
+                                    <div className={"container_card_game_img_homepage"}>
+                                        <img src={modifiedUrl} alt={item.name} />
+                                    </div>
+                                    <div className={'container_name_price_game_home'}>
+                                        <h3>{item.name}</h3>
+                                        <p>{item.price}€</p>
+                                    </div>
+                                </li>
+                            );
+                        }
+                        return null;
+                    })}
+                </ul>
+            </div>
             <BannerReview/>
         </>
     );

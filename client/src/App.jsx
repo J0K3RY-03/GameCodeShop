@@ -9,6 +9,7 @@ import { Register } from "./pages/register";
 import { Home } from "./pages/home";
 import { UserProfile } from "./pages/userProfile";
 import Cart from "./pages/cart"
+import Game from "./pages/game";
 
 function App() {
   // // Current location
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/register" element={<Register />}></Route>
         <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/game" element={<Game />}></Route>
         <Route path="/user-profile" element={<UserProfile />}></Route>
       </Routes>
       <Footer></Footer>
