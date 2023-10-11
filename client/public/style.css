@@ -1068,9 +1068,16 @@ footer {
 .categories-main-container .categories-container .categorie-container {
   width: calc(33% - 5rem);
   aspect-ratio: 2/1;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   background-color: purple;
   position: relative;
+}
+.categories-main-container .categories-container .categorie-container:hover {
+  cursor: pointer;
+}
+.categories-main-container .categories-container .categorie-container:hover .categorie-container-imageTransform {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
 }
 .categories-main-container .categories-container .categorie-container .categorie-container-text {
   position: absolute;
@@ -1093,6 +1100,7 @@ footer {
   height: 100%;
   width: 100%;
   z-index: 2;
+  border-radius: 1rem;
 }
 .categories-main-container .categories-container .categorie-container .action {
   background-image: url("../../../public/assets/action.webp");
@@ -1120,6 +1128,47 @@ footer {
 }
 .categories-main-container .categories-container .categorie-container .vr {
   background-image: url("../../../public/assets/VR.jpg");
+}
+.categories-main-container .categories-container .categorie-container .categorie-container-imageTransform {
+  transition: 0.3s;
+  position: absolute;
+  background-size: contain;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: bottom right;
+  padding: initial;
+  z-index: 10;
+}
+.categories-main-container .categories-container .categorie-container .t-action {
+  background-image: url("../../../public/assets/action-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-adventure {
+  background-image: url("../../../public/assets/adventure-perso.png");
+}
+.categories-main-container .categories-container .categorie-container .t-arcade {
+  background-image: url("../../../public/assets/arcade-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-fps {
+  background-image: url("../../../public/assets/fps-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-fighting {
+  background-image: url("../../../public/assets/fighting-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-rpg {
+  background-image: url("../../../public/assets/rpg-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-single-player {
+  background-image: url("../../../public/assets/single-player-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-strategy {
+  background-image: url("../../../public/assets/strategy-perso.png");
+}
+.categories-main-container .categories-container .categorie-container .t-vr {
+  background-image: url("../../../public/assets/vr-perso.webp");
 }
 
 /*# sourceMappingURL=style.css.map */
