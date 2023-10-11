@@ -131,9 +131,8 @@ body {
   width: 580px;
   position: relative;
   gap: 2rem;
-  background-color: rgba(135, 135, 135, 0.1);
+  background-color: rgba(135, 135, 135, 0.2);
   border-radius: 50px;
-  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   height: 4.2rem;
@@ -1083,9 +1082,10 @@ footer {
   position: absolute;
   display: flex;
   justify-content: center;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.427);
   color: white;
-  padding: 0.5rem;
+  padding: 0rem 1rem;
+  border-radius: 0.5rem;
   font-weight: bold;
   font-size: 1.3rem;
   z-index: 3;
