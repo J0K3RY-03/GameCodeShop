@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
+import { useCookies } from "react-cookie";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
   const [firstName, setFirstName] = useState("");
@@ -12,6 +14,10 @@ export const Register = () => {
   const [usernameError, setUsernameError] = useState("");
   const [emailErrorDisplay, setEmailErrorDisplay] = useState("none");
   const [usernameErrorDisplay, setUsernameErrorDisplay] = useState("none");
+
+  const [_, setCookies] = useCookies(["access_token"]);
+
+  const navigate = useNavigate();
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -42,8 +48,13 @@ export const Register = () => {
       ) {
         setEmailErrorDisplay("block");
         setEmailError(result.data.message);
+      } else if (result.data.message === "User registered.") {
+        // Store token and user ID
+        setCookies("access_token", result.data.token);
+
+        // At this point the user is logged in and should be redirected to Home page
+        navigate("/");
       }
-      console.log(result.data.message);
     } catch (error) {
       console.error(error);
     }

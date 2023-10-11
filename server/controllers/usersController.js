@@ -4,65 +4,83 @@ const jwt = require("jsonwebtoken");
 require("dotenv").config();
 
 const registerNewUser = async (req, res) => {
-  const { firstName, lastName, username, email, password } = req.body;
+  try {
+    const { firstName, lastName, username, email, password } = req.body;
 
-  // Since Username and Email are unique, I have to check if the username or email input value already exists in the Database
-  const userNickname = await UserModel.findOne({ username });
-  const userEmail = await UserModel.findOne({ email });
+    // Since Username and Email are unique, I have to check if the username or email input value already exists in the Database
+    const existingUserNickname = await UserModel.findOne({ username });
+    const existingUserEmail = await UserModel.findOne({ email });
 
-  if (userNickname) {
-    return res.json({
-      message: "The introduced Username already belongs to an account.",
+    if (existingUserNickname) {
+      return res.status(400).json({
+        message: "The introduced Username already belongs to an account.",
+      });
+    } else if (existingUserEmail) {
+      return res.status(400).json({
+        message: "The introduced Email already belongs to an account.",
+      });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+
+    const newUser = new UserModel({
+      firstName,
+      lastName,
+      username,
+      email,
+      password: hashedPassword,
     });
-  } else if (userEmail) {
-    return res.json({
-      message: "The introduced Email already belongs to an account.",
+
+    await newUser.save();
+
+    const user = await UserModel.findOne({ email });
+
+    const userID = { id: user._id };
+
+    const token = jwt.sign(userID, process.env.ACCESS_TOKEN_SECRET);
+
+    res.status(201).json({
+      token,
+      userID,
+      message: "User registered.",
     });
+  } catch (error) {
+    res.status(500).json({ message: "User registration failed." });
   }
-
-  const hashedPassword = await bcrypt.hash(password, 10);
-
-  const newUser = new UserModel({
-    firstName,
-    lastName,
-    username,
-    email,
-    password: hashedPassword,
-  });
-
-  await newUser.save();
-
-  res.json({ message: "User registered." });
 };
 
 const loginUser = async (req, res) => {
-  const { email, password } = req.body;
-  const user = await UserModel.findOne({ email });
+  try {
+    const { email, password } = req.body;
+    const user = await UserModel.findOne({ email });
 
-  if (!user) {
-    return res.json({
-      message: "The introduced email doesn't belong to an account.",
+    if (!user) {
+      return res.json({
+        message: "The introduced email doesn't belong to an account.",
+      });
+    }
+
+    // Check if password value input matches the one stored inside the DB
+    const checkPassword = await bcrypt.compare(password, user.password);
+
+    if (!checkPassword) {
+      return res.json({
+        message: "Email and password combination is incorrect.",
+      });
+    }
+
+    const userID = { id: user._id };
+
+    const token = jwt.sign(userID, process.env.ACCESS_TOKEN_SECRET);
+
+    res.json({
+      token,
+      message: "You logged in!",
+      userID,
     });
+  } catch (error) {
+    res.status(500).json({ message: "User login failed." });
   }
-
-  // Check if password value input matches the one stored inside the DB
-  const checkPassword = await bcrypt.compare(password, user.password);
-
-  if (!checkPassword) {
-    return res.json({
-      message: "Email and password combination is incorrect.",
-    });
-  }
-
-  const userID = { id: user._id };
-
-  const token = jwt.sign(userID, process.env.ACCESS_TOKEN_SECRET);
-
-  res.json({
-    token,
-    message: "You logged in!",
-    userID,
-  });
 };
 
 const displayUserInformation = async (req, res) => {

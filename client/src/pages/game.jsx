@@ -53,10 +53,7 @@ const Game = () => {
             setDataCover(allCoverData);
           })
           .catch((error) => {
-            console.error(
-              "Erreur lors de la récupération des données de jeu",
-              error
-            );
+            console.error(`There's been an error: ${error}`);
           });
       });
   }, []);
@@ -74,8 +71,8 @@ const Game = () => {
 
   return (
     <>
-      <div className={"section_game_homepage"}>
-        <h2>Liste des jeux</h2>
+      <section className={"section_game_homepage"}>
+        <h2>Games list</h2>
         <ul
           className={"container_card_game_homepage"}
           style={{ color: "white" }}
@@ -93,20 +90,20 @@ const Game = () => {
 
               return (
                 <li className={"card_game_item_homepage"} key={item._id}>
-                  <div className={"container_card_game_img_homepage"}>
+                  <article className={"container_card_game_img_homepage"}>
                     <img src={modifiedUrl} alt={item.name} />
-                  </div>
-                  <div className={"container_name_price_game_home"}>
+                  </article>
+                  <article className={"container_name_price_game_home"}>
                     <h3>{item.name}</h3>
                     <p>{item.price}€</p>
-                  </div>
+                  </article>
                 </li>
               );
             }
             return null;
           })}
         </ul>
-      </div>
+      </section>
       <BannerReview />
     </>
   );
