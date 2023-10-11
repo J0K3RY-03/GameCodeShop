@@ -1,0 +1,70 @@
+.categories-main-container {
+  width: 100%;
+  padding: 9rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .categories-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    flex-wrap: wrap;
+    .categorie-container {
+      width: calc(33% - 5rem);
+      aspect-ratio: 2/1;
+      border-radius: 0.5rem;
+      background-color: purple;
+      position: relative;
+      .categorie-container-text {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        color: white;
+        padding: 0.5rem;
+        font-weight: bold;
+        font-size: 1.3rem;
+        z-index: 3;
+        bottom: 10%;
+        left: 5%;
+      }
+      .categorie-container-image {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+      }
+      .action {
+        background-image: url("../../../public/assets/action.webp");
+      }
+      .adventure {
+        background-image: url("../../../public/assets/adventure.jpg");
+      }
+      .arcade {
+        background-image: url("../../../public/assets/arcade.jpeg");
+      }
+      .fps {
+        background-image: url("../../../public/assets/fps.jpg");
+      }
+      .fighting {
+        background-image: url("../../../public/assets/fighting.webp");
+      }
+      .rpg {
+        background-image: url("../../../public/assets/RPG.webp");
+      }
+      .single-player {
+        background-image: url("../../../public/assets/single-player.jpg");
+      }
+      .strategy {
+        background-image: url("../../../public/assets/strategy.webp");
+      }
+      .vr {
+        background-image: url("../../../public/assets/VR.jpg");
+      }
+    }
+  }
+}

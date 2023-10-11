@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import BannerReview from "../components/BannerReview.jsx";
 
 const Game = () => {
   const [dataGame, setDataGame] = useState([]);
@@ -104,7 +103,6 @@ const Game = () => {
           })}
         </ul>
       </section>
-      <BannerReview />
     </>
   );
 };

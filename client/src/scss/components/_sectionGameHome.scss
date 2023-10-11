@@ -1,8 +1,10 @@
 .section_game_homepage {
-  max-width: 1400px;
-  margin: auto;
-  padding: 6rem 0;
-
+  width: 100%;
+  padding: 6rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   h2 {
     color: white;
     font-size: 1.8rem;
@@ -11,20 +13,20 @@
 
   .container_card_game_homepage {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     flex-wrap: wrap;
     gap: 6rem;
-    padding: 0 2rem;
+    width: 80%;
 
     .card_game_item_homepage {
-      max-width: 220px;
-      max-height: 400px;
+      width: calc(25% - 6rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
       h3 {
         max-width: inherit;
-        font-size: 1rem;
-        margin-right: 0.5rem;
-        overflow: hidden;
+        font-size: 1.3rem;
         text-overflow: ellipsis;
         white-space: nowrap;
       }
@@ -43,6 +45,7 @@
         }
 
         &:hover {
+          cursor: pointer;
           transform: scale(1.05);
         }
       }

@@ -87,9 +87,6 @@ body {
   -webkit-appearance: none;
   margin: 0;
 }
-.container_newGame_page .container_newGame_Form .form_newGame input[type=number] {
-  -moz-appearance: textfield; /* Firefox */
-}
 .container_newGame_page .container_newGame_Form .form_newGame .container_tags_newGame {
   display: flex;
   margin: 1.5rem 0 1rem 0;
@@ -639,9 +636,12 @@ body {
 }
 
 .section_game_homepage {
-  max-width: 1400px;
-  margin: auto;
-  padding: 6rem 0;
+  width: 100%;
+  padding: 6rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .section_game_homepage h2 {
   color: white;
@@ -650,20 +650,20 @@ body {
 }
 .section_game_homepage .container_card_game_homepage {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   gap: 6rem;
-  padding: 0 2rem;
+  width: 80%;
 }
 .section_game_homepage .container_card_game_homepage .card_game_item_homepage {
-  max-width: 220px;
-  max-height: 400px;
+  width: calc(25% - 6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 .section_game_homepage .container_card_game_homepage .card_game_item_homepage h3 {
   max-width: inherit;
-  font-size: 1rem;
-  margin-right: 0.5rem;
-  overflow: hidden;
+  font-size: 1.3rem;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -681,6 +681,7 @@ body {
   background-position: center;
 }
 .section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage:hover {
+  cursor: pointer;
   transform: scale(1.05);
 }
 .section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_name_price_game_home {
@@ -1048,6 +1049,77 @@ footer {
   background: var(--color-red-hover);
   cursor: pointer;
   border: 1px solid white;
+}
+
+.categories-main-container {
+  width: 100%;
+  padding: 9rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categories-main-container .categories-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.categories-main-container .categories-container .categorie-container {
+  width: calc(33% - 5rem);
+  aspect-ratio: 2/1;
+  border-radius: 0.5rem;
+  background-color: purple;
+  position: relative;
+}
+.categories-main-container .categories-container .categorie-container .categorie-container-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  z-index: 3;
+  bottom: 10%;
+  left: 5%;
+}
+.categories-main-container .categories-container .categorie-container .categorie-container-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+.categories-main-container .categories-container .categorie-container .action {
+  background-image: url("../../../public/assets/action.webp");
+}
+.categories-main-container .categories-container .categorie-container .adventure {
+  background-image: url("../../../public/assets/adventure.jpg");
+}
+.categories-main-container .categories-container .categorie-container .arcade {
+  background-image: url("../../../public/assets/arcade.jpeg");
+}
+.categories-main-container .categories-container .categorie-container .fps {
+  background-image: url("../../../public/assets/fps.jpg");
+}
+.categories-main-container .categories-container .categorie-container .fighting {
+  background-image: url("../../../public/assets/fighting.webp");
+}
+.categories-main-container .categories-container .categorie-container .rpg {
+  background-image: url("../../../public/assets/RPG.webp");
+}
+.categories-main-container .categories-container .categorie-container .single-player {
+  background-image: url("../../../public/assets/single-player.jpg");
+}
+.categories-main-container .categories-container .categorie-container .strategy {
+  background-image: url("../../../public/assets/strategy.webp");
+}
+.categories-main-container .categories-container .categorie-container .vr {
+  background-image: url("../../../public/assets/VR.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
