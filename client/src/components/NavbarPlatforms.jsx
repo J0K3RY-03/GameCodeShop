@@ -29,9 +29,7 @@ export const NavbarPlateformes = () => {
             className={"nav_container_section nav_nintendo_section"}
             href={"#"}
           >
-            <div className={"nintendo_img_container nav_ico"}>
-              <i className="fa-solid fa-gamepad"></i>
-            </div>
+            <i className="fa-solid fa-gamepad"></i>
             <span>Nintendo</span>
           </a>
           <div
@@ -65,9 +63,9 @@ export const NavbarPlateformes = () => {
   };
 
   return (
-    <div className={`${style} nav_container_all_plateformes`}>
+    <section className={`${style} nav_container_all_plateformes`}>
       {renderContent()}
-    </div>
+    </section>
   );
 };
 

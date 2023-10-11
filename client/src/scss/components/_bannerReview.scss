@@ -4,15 +4,13 @@
   background: var(--color-ultra-dark);
   color: var(--color-light-grey);
   justify-content: center;
-  height: 170px;
-
+  align-items: center;
+  padding: 3rem 0rem;
   .list_banner_review {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1400px;
-    flex: 1;
-
+    width: 80%;
     .separator_banner_review {
       height: 80px;
       width: 2px;
@@ -23,7 +21,10 @@
       display: flex;
       align-items: center;
       gap: 1.2rem;
-
+      padding: 1.5rem 0rem 1.5rem 4rem;
+      &:not(:first-child) {
+        border-left: 2px solid grey;
+      }
       i {
         font-size: 2rem;
         color: var(--color-red);
@@ -61,7 +62,6 @@
 
         .trust_star {
           font-size: 2rem;
-
         }
 
         i {

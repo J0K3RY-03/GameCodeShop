@@ -16,12 +16,12 @@ const HeaderSecond = () => {
 
   return (
     <header className={"header_second"}>
-      <div className={"header-nav"}>
+      <section className={"header-nav"}>
         <Link to="/" className="logo_gcs">
           GameCodeShop
         </Link>
         <NavbarPlatforms />
-        <div className={"container_header_log_card"}>
+        <article className={"container_header_log_card"}>
           <a href="#"></a>
           {cookies.access_token ? (
             <div className="userConnected-menu">
@@ -46,8 +46,8 @@ const HeaderSecond = () => {
           )}
 
           {/* <Link to="/new-game">Add new game</Link> */}
-        </div>
-      </div>
+        </article>
+      </section>
     </header>
   );
 };

@@ -23,9 +23,8 @@ export const ProfileMyProfile = () => {
         setUserEmail(response.data.userInfo.email);
         setUsername(response.data.userInfo.username);
         setMemberSince(convertAndFormatDate(response.data.userInfo.createdAt));
-        console.log(response);
       } catch (error) {
-        console.error(error);
+        console.error(`There's been an error: ${error}`);
       }
     };
 
@@ -33,30 +32,30 @@ export const ProfileMyProfile = () => {
   }, []);
 
   return (
-    <div className="display-userInformation">
-      <div className="user-date-and-username">
+    <section className="display-userInformation">
+      <article className="user-date-and-username">
         <p className="user-username">{username}</p>
         <p className="user-date">Member since: {memberSince}</p>
-      </div>
-      <div className="personalInformation">
-        <div className="user-firstName">
+      </article>
+      <section className="personalInformation">
+        <article className="user-firstName">
           <p className="static">First name</p>
           <p className="dynamic">{userFirstName}</p>
-        </div>
-        <div className="user-lastName">
+        </article>
+        <article className="user-lastName">
           <p className="static">Last name</p>
           <p className="dynamic">{userLastName}</p>
-        </div>
+        </article>
 
-        <div className="user-username">
+        <article className="user-username">
           <p className="static">Username</p>
           <p className="dynamic">{username}</p>
-        </div>
-        <div className="user-email">
+        </article>
+        <article className="user-email">
           <p className="static">Email</p>
           <p className="dynamic">{userEmail}</p>
-        </div>
-      </div>
-    </div>
+        </article>
+      </section>
+    </section>
   );
 };

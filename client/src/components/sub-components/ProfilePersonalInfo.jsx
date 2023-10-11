@@ -27,7 +27,7 @@ export const ProfilePersonalInfo = () => {
     }
   };
   return (
-    <div className="userPersonalInformation">
+    <section className="userPersonalInformation">
       <h1>Change your personal information</h1>
       <form className="loginAndRegister-form" onSubmit={onSubmit}>
         <input
@@ -57,6 +57,6 @@ export const ProfilePersonalInfo = () => {
 
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </section>
   );
 };

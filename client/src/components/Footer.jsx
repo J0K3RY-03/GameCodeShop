@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
     <footer>
-      <div className="footer-container">
-        <div className="footer-top">
-          <div className="footer-top-left">
+      <section className="footer-container">
+        <section className="footer-top">
+          <article className="footer-top-left">
             <ul>
               <li>
                 <a href="#">Terms of use</a>
@@ -25,8 +25,8 @@ const Footer = () => {
                 <a href="#">Redeem a gift card</a>
               </li>
             </ul>
-          </div>
-          <div className="footer-top-right">
+          </article>
+          <article className="footer-top-right">
             <div className="socials-container">
               <a href="#" className="discord-social">
                 <svg
@@ -83,10 +83,10 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
 
-        <div className="footer-bottom">
+        <section className="footer-bottom">
           <p>
             Built by:{" "}
             <a
@@ -113,8 +113,8 @@ const Footer = () => {
               Source code
             </a>
           </p>
-        </div>
-      </div>
+        </section>
+      </section>
     </footer>
   );
 };

@@ -24,7 +24,6 @@ export const ProfilePassword = () => {
 
       setError(response.data.message);
       setErrorDisplay("block");
-      console.log(response);
     } catch (error) {
       setError(error.response.data.message);
       setErrorDisplay("block");
@@ -32,7 +31,7 @@ export const ProfilePassword = () => {
     }
   };
   return (
-    <div className="userPassword">
+    <section className="userPassword">
       <h1>Change your account password</h1>
       <form className="loginAndRegister-form" onSubmit={onSubmit}>
         <input
@@ -68,6 +67,6 @@ export const ProfilePassword = () => {
 
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </section>
   );
 };

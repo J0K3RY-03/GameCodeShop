@@ -30,7 +30,7 @@ export const ProfileEmail = () => {
     }
   };
   return (
-    <div className="userEmail">
+    <section className="userEmail">
       <h1>Change your account email</h1>
       <form className="loginAndRegister-form" onSubmit={onSubmit}>
         <input
@@ -69,6 +69,6 @@ export const ProfileEmail = () => {
 
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </section>
   );
 };

@@ -16,12 +16,12 @@ const Header = () => {
 
   return (
     <header className={"header_home"}>
-      <div className={"header-nav"}>
+      <section className={"header-nav"}>
         <Link to="/" className="logo_gcs">
           GameCodeShop
         </Link>
         <NavbarPlatforms />
-        <div className={"container_header_log_card"}>
+        <article className={"container_header_log_card"}>
           <a href="#"></a>
           {cookies.access_token ? (
             <div className="userConnected-menu">
@@ -49,17 +49,17 @@ const Header = () => {
           )}
 
           {/* <Link to="/new-game">Add new game</Link> */}
-        </div>
-      </div>
-      <div className={"container_topBanner"}>
+        </article>
+      </section>
+      <section className={"container_topBanner"}>
         <div className={"container_img_topBanner"}>
-          <img src="../../public/assets/fc24.jpg" alt="fc 24" />
+          <img src="../../public/assets/fc24.jpg" alt="fc 24 game image" />
         </div>
         <div className={"content_topBanner"}>
           <h3>EA Sports FC24</h3>
           <p>49.99€</p>
         </div>
-      </div>
+      </section>
     </header>
   );
 };
