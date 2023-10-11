@@ -1,10 +1,5 @@
-export const Home = () => {
-  return <div>
-    <div>
-      <div>
-        <img src="" alt=""/>
-      </div>
+import Game from "./game";
 
-    </div>
-  </div>;
+export const Home = () => {
+  return <Game />;
 };
