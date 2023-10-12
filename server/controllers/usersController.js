@@ -12,11 +12,13 @@ const registerNewUser = async (req, res) => {
     const existingUserEmail = await UserModel.findOne({ email });
 
     if (existingUserNickname) {
-      return res.status(400).json({
+      return res.json({
         message: "The introduced Username already belongs to an account.",
       });
-    } else if (existingUserEmail) {
-      return res.status(400).json({
+    }
+
+    if (existingUserEmail) {
+      return res.json({
         message: "The introduced Email already belongs to an account.",
       });
     }
@@ -39,13 +41,13 @@ const registerNewUser = async (req, res) => {
 
     const token = jwt.sign(userID, process.env.ACCESS_TOKEN_SECRET);
 
-    res.status(201).json({
+    res.json({
       token,
       userID,
       message: "User registered.",
     });
   } catch (error) {
-    res.status(500).json({ message: "User registration failed." });
+    res.json({ message: "User registration failed." });
   }
 };
 
@@ -79,7 +81,7 @@ const loginUser = async (req, res) => {
       userID,
     });
   } catch (error) {
-    res.status(500).json({ message: "User login failed." });
+    res.json({ message: "User login failed." });
   }
 };
 
@@ -88,9 +90,7 @@ const displayUserInformation = async (req, res) => {
   const token = req.cookies.access_token;
 
   if (!token) {
-    return res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    return res.json({ message: "You don't have permission, please log in!" });
   }
 
   try {
@@ -102,11 +102,9 @@ const displayUserInformation = async (req, res) => {
 
     const user = await UserModel.findOne({ _id: userID });
 
-    res.status(200).json({ userInfo: user });
+    res.json({ userInfo: user });
   } catch (error) {
-    res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    res.json({ message: "You don't have permission, please log in!" });
   }
 };
 
@@ -115,9 +113,7 @@ const updateUserPersonalInformation = async (req, res) => {
   const token = req.cookies.access_token;
 
   if (!token) {
-    return res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    return res.json({ message: "You don't have permission, please log in!" });
   }
 
   try {
@@ -140,14 +136,10 @@ const updateUserPersonalInformation = async (req, res) => {
 
       res.json({ firstName, lastName, userID });
     } else {
-      res
-        .status(401)
-        .json({ message: "There's been an error. Log in again, please." });
+      res.json({ message: "There's been an error. Log in again, please." });
     }
   } catch (error) {
-    res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    res.json({ message: "You don't have permission, please log in!" });
   }
 };
 
@@ -156,9 +148,7 @@ const updateUserEmail = async (req, res) => {
   const token = req.cookies.access_token;
 
   if (!token) {
-    return res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    return res.json({ message: "You don't have permission, please log in!" });
   }
 
   try {
@@ -177,23 +167,23 @@ const updateUserEmail = async (req, res) => {
       const checkPassword = await bcrypt.compare(password, user.password);
 
       if (!checkPassword) {
-        return res.status(401).json({
+        return res.json({
           message: "Password introduced is incorrect.",
         });
       }
 
       // Check if email and confirmEmail have same value
       if (email !== confirmEmail) {
-        return res.status(401).json({ message: "Emails need to match." });
+        return res.json({ message: "Emails need to match." });
       }
 
       // Check if the new wanted email already exists in our DB
       const checkIfEmailExists = await UserModel.findOne({ email });
 
       if (checkIfEmailExists) {
-        return res
-          .status(401)
-          .json({ message: "Email introduced already belongs to an account." });
+        return res.json({
+          message: "Email introduced already belongs to an account.",
+        });
       }
 
       // Update user information
@@ -202,16 +192,12 @@ const updateUserEmail = async (req, res) => {
         { $set: { email } }
       );
 
-      res.json({ email, userID });
+      res.json({ email, userID, message: "Email updated!" });
     } else {
-      res
-        .status(401)
-        .json({ message: "There's been an error. Log in again, please." });
+      res.json({ message: "There's been an error. Log in again, please." });
     }
   } catch (error) {
-    res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    res.json({ message: "You don't have permission, please log in!" });
   }
 };
 
@@ -220,9 +206,7 @@ const updateUserPassword = async (req, res) => {
   const token = req.cookies.access_token;
 
   if (!token) {
-    return res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    return res.json({ message: "You don't have permission, please log in!" });
   }
 
   try {
@@ -238,9 +222,9 @@ const updateUserPassword = async (req, res) => {
       const { newPassword, confirmNewPassword, currentPassword } = req.body;
 
       if (newPassword !== confirmNewPassword) {
-        return res.status(401).json({ message: "Passwords don't match." });
+        return res.json({ message: "Passwords don't match." });
       } else if (currentPassword === newPassword) {
-        return res.status(401).json({
+        return res.json({
           message: "New password needs to be different from the current one.",
         });
       }
@@ -252,7 +236,7 @@ const updateUserPassword = async (req, res) => {
       );
 
       if (!checkPassword) {
-        return res.status(401).json({
+        res.json({
           message: "The current password introduced is incorrect.",
         });
       }
@@ -267,12 +251,10 @@ const updateUserPassword = async (req, res) => {
 
       res.json({ message: "Password modified", userID });
     } else {
-      res.status(401).json({ message: "There's been an error, log in again." });
+      res.json({ message: "There's been an error, log in again." });
     }
   } catch (error) {
-    res
-      .status(401)
-      .json({ message: "You don't have permission, please log in!" });
+    res.json({ message: "You don't have permission, please log in!" });
   }
 };
 

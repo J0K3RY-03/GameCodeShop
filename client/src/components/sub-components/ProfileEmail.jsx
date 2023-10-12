@@ -21,7 +21,12 @@ export const ProfileEmail = () => {
         { email, confirmEmail, password },
         { withCredentials: true }
       );
-
+      if (response.data.message === "Email updated!") {
+        window.location.reload();
+      } else {
+        setError(response.data.message);
+        setErrorDisplay("block");
+      }
       console.log(response);
     } catch (error) {
       setError(error.response.data.message);

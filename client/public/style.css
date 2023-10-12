@@ -994,7 +994,8 @@ footer {
   color: var(--color-light-white);
   text-align: center;
 }
-.container_section_cart .container_cart_resume .cart_section button {
+.container_section_cart .container_cart_resume .cart_section a {
+  font-weight: bold;
   margin: 2rem 0 0 0;
   background: inherit;
   outline: none;
@@ -1004,7 +1005,7 @@ footer {
   border-radius: 10px;
   font-size: 1rem;
 }
-.container_section_cart .container_cart_resume .cart_section button:hover {
+.container_section_cart .container_cart_resume .cart_section a:hover {
   background: var(--color-red);
   cursor: pointer;
 }
@@ -1043,6 +1044,7 @@ footer {
   font-size: 1.2rem;
   border: 1px solid rgba(252, 0, 0, 0.7);
   color: white;
+  font-weight: bold;
 }
 .container_section_cart .container_cart_resume .cart_section_resume button:hover {
   background: var(--color-red-hover);

@@ -36,6 +36,7 @@ export const Register = () => {
         email,
         password,
       });
+      console.log(result);
       if (
         result.data.message ===
         "The introduced Username already belongs to an account."
