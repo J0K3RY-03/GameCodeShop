@@ -12,7 +12,7 @@ export const UserProfile = () => {
   };
 
   return (
-    <div className="profile-contentContainer">
+    <section className="profile-contentContainer">
       <ul className="profile-navbar">
         <li
           className={activeLi === "profile" ? "active" : ""}
@@ -37,6 +37,6 @@ export const UserProfile = () => {
       {activeLi === "profile" && <Profile />}
       {activeLi === "wishlist" && <Wishlist />}
       {activeLi === "reviews" && <Reviews />}
-    </div>
+    </section>
   );
 };

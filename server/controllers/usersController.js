@@ -134,7 +134,12 @@ const updateUserPersonalInformation = async (req, res) => {
         { $set: { firstName, lastName } }
       );
 
-      res.json({ firstName, lastName, userID });
+      res.json({
+        firstName,
+        lastName,
+        userID,
+        message: "Personal information updated!",
+      });
     } else {
       res.json({ message: "There's been an error. Log in again, please." });
     }
@@ -223,7 +228,9 @@ const updateUserPassword = async (req, res) => {
 
       if (newPassword !== confirmNewPassword) {
         return res.json({ message: "Passwords don't match." });
-      } else if (currentPassword === newPassword) {
+      }
+
+      if (currentPassword === newPassword) {
         return res.json({
           message: "New password needs to be different from the current one.",
         });
@@ -249,7 +256,7 @@ const updateUserPassword = async (req, res) => {
         { $set: { password: hashedPassword } }
       );
 
-      res.json({ message: "Password modified", userID });
+      res.json({ message: "Password modified!", userID });
     } else {
       res.json({ message: "There's been an error, log in again." });
     }

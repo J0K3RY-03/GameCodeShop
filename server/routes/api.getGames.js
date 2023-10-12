@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const axios = require("axios");
 
-const apiKey = "puhhutxn965fly2yj9k5fhinuljumu";
-const accessToken = "7n0l4nc38d39uq636essk3qtijrzcg";
-const apiUrl = "https://api.igdb.com/v4/";
+const gamesApiClientID = process.env.GAMES_API_CLIENT_ID;
+const gamesApiToken = process.env.GAMES_API_CLIENT_SECRET_TOKEN;
+const gamesApi = process.env.GAMES_API;
 
 router.get("/getgame/:name", async (req, res) => {
   const gameName = req.params.name;
@@ -12,10 +12,10 @@ router.get("/getgame/:name", async (req, res) => {
   try {
     const response = await axios({
       method: "post",
-      url: apiUrl + "games",
+      url: gamesApi + "games",
       headers: {
-        "Client-ID": apiKey,
-        Authorization: `Bearer ${accessToken}`,
+        "Client-ID": gamesApiClientID,
+        Authorization: `Bearer ${gamesApiToken}`,
       },
       data: `search "${gameName}"; 
              fields name,release_dates,summary,cover,category; 
@@ -25,8 +25,15 @@ router.get("/getgame/:name", async (req, res) => {
     const games = response.data;
     res.json(games);
   } catch (error) {
-    console.error("Erreur lors de la requête à l'API IGDB :", error);
-    res.status(500).json({ error: "Erreur lors de la requête à l'API IGDB" });
+    console.error(
+      "There's been an error requesting information from the IGDB API :",
+      error
+    );
+    res
+      .status(500)
+      .json({
+        error: "There's been an error requesting information from the IGDB API",
+      });
   }
 });
 

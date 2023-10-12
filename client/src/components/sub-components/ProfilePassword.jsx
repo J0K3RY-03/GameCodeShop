@@ -22,8 +22,14 @@ export const ProfilePassword = () => {
         { withCredentials: true }
       );
 
-      setError(response.data.message);
-      setErrorDisplay("block");
+      if (response.data.message === "Password modified!") {
+        console.log(response.data.message);
+        window.location.reload();
+      } else {
+        console.log(response);
+        setError(response.data.message);
+        setErrorDisplay("block");
+      }
     } catch (error) {
       setError(error.response.data.message);
       setErrorDisplay("block");

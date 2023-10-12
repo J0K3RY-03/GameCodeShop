@@ -2,22 +2,21 @@ const axios = require("axios");
 const express = require("express");
 const router = express.Router();
 
-const apiKey = "puhhutxn965fly2yj9k5fhinuljumu";
-const accessToken = "7n0l4nc38d39uq636essk3qtijrzcg";
-const apiUrl = "https://api.igdb.com/v4/";
+const gamesApiClientID = process.env.GAMES_API_CLIENT_ID;
+const gamesApiToken = process.env.GAMES_API_CLIENT_SECRET_TOKEN;
+const gamesApi = process.env.GAMES_API;
 
 router.get("/getcover/:id", async (req, res) => {
   const gameIdGame = req.params.id;
   console.log(gameIdGame, "IDDDD");
-  const gameId = 167455;
 
   try {
     const response = await axios({
       method: "post",
-      url: apiUrl + "covers",
+      url: gamesApi + "covers",
       headers: {
-        "Client-ID": apiKey,
-        Authorization: `Bearer ${accessToken}`,
+        "Client-ID": gamesApiClientID,
+        Authorization: `Bearer ${gamesApiToken}`,
       },
       data: `fields alpha_channel,animated,checksum,game,game_localization,height,image_id,url,width; where game = ${gameIdGame};`,
     });
@@ -25,10 +24,13 @@ router.get("/getcover/:id", async (req, res) => {
     const games = response.data;
     res.json(games);
   } catch (error) {
-    console.error("Erreur lors de la requête à l'API IGDB :", error);
-    res
-      .status(500)
-      .json({ error: "Erreur lors de la requête à l'API IGDB COVER" });
+    console.error(
+      "There's been an error requesting information from the IGDB API: ",
+      error
+    );
+    res.status(500).json({
+      error: "There's been an error requesting the cover from the IGDB API",
+    });
   }
 });
 

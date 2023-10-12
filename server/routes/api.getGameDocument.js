@@ -12,8 +12,5 @@ router.get("/getdocgame", async (req, res) => {
       .json({ error: "Erreur lors de la récupération du nom des jeux" });
   }
 });
-//
-// const retreiveGameDoc = async (req, res) => {
-//
-// }
+
 module.exports = router;

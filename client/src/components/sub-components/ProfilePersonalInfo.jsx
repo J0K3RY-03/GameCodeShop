@@ -21,8 +21,16 @@ export const ProfilePersonalInfo = () => {
         { withCredentials: true }
       );
 
+      if (response.data.message === "Personal information updated!") {
+        window.location.reload();
+      } else {
+        setError(response.data.message);
+        setErrorDisplay("block");
+      }
       console.log(response);
     } catch (error) {
+      setError(error.response.data.message);
+      setErrorDisplay("block");
       console.error(error);
     }
   };
