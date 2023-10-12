@@ -28,6 +28,9 @@ const Header = () => {
               <Link to="/user-profile">
                 <i className="fa-regular fa-circle-user">My Profile</i>
               </Link>
+              <Link to="/cart">
+                <i className="fa-solid fa-cart-shopping"></i>
+              </Link>
               <svg
                 onClick={logout}
                 xmlns="http://www.w3.org/2000/svg"
@@ -38,9 +41,6 @@ const Header = () => {
             </div>
           ) : (
             <>
-              <Link to="/cart">
-                <i className="fa-solid fa-cart-shopping"></i>
-              </Link>
               <Link to="/login">
                 {" "}
                 <i className="fa-regular fa-circle-user"></i>

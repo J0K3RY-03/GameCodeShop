@@ -6,7 +6,6 @@ const logger = require("morgan");
 require("dotenv").config();
 const cors = require("cors");
 const db = require(path.join(__dirname, "models", "dbModel"));
-
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
 
