@@ -13,7 +13,7 @@ const createNewGame = async (req, res) => {
   games
     .save()
     .then(() => {
-      res.status(200).json({ message: "Game stored." });
+      res.json({ message: "Game stored." });
     })
     .catch((err) => {
       res.status(500).json({
