@@ -20,7 +20,8 @@ router.get('/getvideoofgame/:id', async (req, res) => {
             },
             data: ` 
              fields checksum,game,name,video_id; 
-             where game = ${gameId};`,
+             where game = ${gameId};
+             limit 2;`,
         });
 
         const games = response.data;

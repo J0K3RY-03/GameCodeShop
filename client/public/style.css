@@ -1,14 +1,14 @@
 :root {
-    --color-ultra-dark: #101010;
-    --color-light-dark: #323232;
-    --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
-    --color-medium-dark: #272727;
-    --color-light-grey: #5b5b5b;
-    --color-red: #eb1905;
-    --color-white: #ffffff;
-    --color-light-white: #949494;
-    --color-red-hover: #b51506;
-    --color-light-green: #3bff00;
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-light-white: #949494;
+  --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
 }
 
 * {
@@ -27,6 +27,20 @@ a {
 
 body {
   min-height: 100vh;
+  background: var(--color-medium-dark);
+}
+
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-light-white: #949494;
+  --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
 }
 
 .container_newGame_page {
@@ -46,6 +60,15 @@ body {
   width: 40rem;
   border-radius: 10px;
 }
+.container_newGame_page .container_newGame_Form .form_newGame .error_input_not_valid {
+  padding: 0.8rem;
+  background: rgba(167, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 0.5px solid var(--color-light-grey);
+  color: var(--color-red);
+  margin-bottom: 1rem;
+  width: 20rem;
+}
 .container_newGame_page .container_newGame_Form .form_newGame input {
   background: var(--color-ultra-dark);
   padding: 0.5rem 0.5rem 0.5rem 1rem;
@@ -63,9 +86,6 @@ body {
 .container_newGame_page .container_newGame_Form .form_newGame input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-.container_newGame_page .container_newGame_Form .form_newGame input[type=number] {
-  -moz-appearance: textfield; /* Firefox */
 }
 .container_newGame_page .container_newGame_Form .form_newGame .container_tags_newGame {
   display: flex;
@@ -99,55 +119,55 @@ body {
   background: var(--color-red-hover);
 }
 
-.navbar_plateformes .search_on {
+.search_on {
   background-color: var(--color-red) !important;
+  display: flex;
+  justify-content: space-around !important;
+  align-items: center;
+  width: 100%;
 }
-.navbar_plateformes .nav_container_all_plateformes {
+
+.nav_container_all_plateformes {
+  width: 580px;
   position: relative;
-  width: 600px;
-  background-color: rgba(135, 135, 135, 0.1);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  gap: 2rem;
+  background-color: rgba(135, 135, 135, 0.2);
   border-radius: 50px;
   display: flex;
   align-items: center;
   height: 4.2rem;
-  justify-content: space-around;
+  justify-content: center;
   color: white;
+  padding: 1.5rem 0rem 1.5rem 1.5rem;
 }
-.navbar_plateformes .nav_container_all_plateformes a {
-  color: white;
-}
-.navbar_plateformes .nav_container_all_plateformes .nav_ico {
-  margin-right: 0.5rem;
-}
-.navbar_plateformes .nav_container_all_plateformes .nav_nintendo_section {
+.nav_container_all_plateformes .nav_container_section {
+  text-decoration: none;
   display: flex;
   align-items: center;
-  margin-right: 3rem;
+  justify-content: center;
+  gap: 0.5rem;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_nintendo_section .nintendo_img_container {
-  height: 16px;
-  width: 16px;
+.nav_container_all_plateformes .nav_container_section:hover {
+  color: var(--color-red);
+  cursor: pointer;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_nintendo_section .nintendo_img_container img {
-  max-width: 100%;
-}
-.navbar_plateformes .nav_container_all_plateformes .nav_plateformes_search {
-  position: absolute;
-  right: -15px;
-  border-radius: 50px;
+.nav_container_all_plateformes .nav_plateformes_search {
+  border-radius: 50%;
   background: var(--color-red);
   height: inherit;
-  width: 4.2rem;
+  width: 4.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-.navbar_plateformes .nav_container_all_plateformes .nav_plateformes_search:hover > .gcs_search_nav {
+.nav_container_all_plateformes .nav_plateformes_search:hover > .gcs_search_nav {
+  color: white !important;
   transition: 0.2s ease-in-out;
-  transform: scale(1.4);
+  transform: scale(1.3);
 }
 
 .nav_form_search {
@@ -164,21 +184,22 @@ body {
   color: white;
   font-size: 1rem;
   font-weight: 400;
-  width: 80%;
-  padding-left: 0.5rem;
+  font-weight: bold;
 }
 .nav_form_search ::placeholder {
   color: white;
+  font-weight: bold;
 }
 
 .nav_advanced_search {
-  font-size: 0.9rem;
-  font-weight: 100;
-  width: 30%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
 }
 
 .nav_plateformes_search_exit {
   position: absolute;
+  font-size: 1.3rem;
   right: -25px;
 }
 .nav_plateformes_search_exit:hover {
@@ -187,23 +208,148 @@ body {
   transform: scale(1.3);
 }
 
-header {
+.header_home {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  background: #272727;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 0%, rgba(0, 0, 0, 0) 30%);
+  height: 60vh;
+  width: 100%;
 }
-header .logo_gcs {
-  padding-left: 1rem;
-  color: white;
+.header_home .header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  padding: 2rem 0rem 0rem 0rem;
 }
-header .container_header_log_card a {
-  padding-right: 1rem;
-  color: white;
-}
-header .container_header_log_card a i {
+.header_home .logo_gcs {
+  font-weight: bold;
   font-size: 1.5rem;
+  color: white;
+}
+.header_home .container_header_log_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header_home .container_header_log_card a {
+  color: white;
+}
+.header_home .container_header_log_card a i {
+  font-size: 1.5rem;
+}
+.header_home .container_header_log_card a i:hover {
+  color: var(--color-red);
+}
+.header_home .userConnected-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header_home .userConnected-menu a i {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 1.2rem;
+}
+.header_home .userConnected-menu svg {
+  height: 1.3rem;
+  fill: white;
+}
+.header_home .userConnected-menu svg:hover {
+  cursor: pointer;
+  fill: var(--color-red);
+}
+
+.header_second {
+  height: 15vh;
+  width: 100%;
+  background-color: var(--color-ultra-dark);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_second .header-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 4;
+  padding: 2rem 0rem 0rem 0rem;
+}
+.header_second .logo_gcs {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: white;
+}
+.header_second .container_header_log_card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header_second .container_header_log_card a {
+  color: white;
+}
+.header_second .container_header_log_card a i {
+  font-size: 1.3rem;
+}
+.header_second .container_header_log_card a i:hover {
+  color: var(--color-red);
+}
+.header_second .userConnected-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.header_second .userConnected-menu a i {
+  display: flex;
+  gap: 0.5rem;
+}
+.header_second .userConnected-menu svg {
+  height: 1.3rem;
+  fill: white;
+}
+.header_second .userConnected-menu svg:hover {
+  cursor: pointer;
+  fill: var(--color-red);
+}
+
+.container_topBanner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+  position: relative;
+}
+.container_topBanner .container_img_topBanner {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+.container_topBanner .container_img_topBanner img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.container_topBanner .content_topBanner {
+  position: absolute;
+  left: 25%;
+  top: 50%;
+  font-size: 2rem;
+  color: white;
 }
 
 :root {
@@ -214,7 +360,9 @@ header .container_header_log_card a i {
   --color-light-grey: #5b5b5b;
   --color-red: #eb1905;
   --color-white: #ffffff;
+  --color-light-white: #949494;
   --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
 }
 
 .loginAndRegister-container {
@@ -303,6 +451,461 @@ header .container_header_log_card a i {
   color: rgb(241, 145, 145);
 }
 
+:root {
+  --color-ultra-dark: #101010;
+  --color-light-dark: #323232;
+  --color-light-dark-mid_opacity: rgba(245, 245, 245, 0.1);
+  --color-medium-dark: #272727;
+  --color-light-grey: #5b5b5b;
+  --color-red: #eb1905;
+  --color-white: #ffffff;
+  --color-light-white: #949494;
+  --color-red-hover: #b51506;
+  --color-light-green: #3bff00;
+}
+
+.profile-contentContainer {
+  background-color: var(--color-medium-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0rem;
+}
+
+.profile-navbar {
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  width: 80%;
+  border-bottom: 3px solid grey;
+}
+.profile-navbar li {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+.profile-navbar li:hover {
+  cursor: pointer;
+  color: var(--color-red);
+}
+.profile-navbar .active {
+  color: var(--color-red);
+  border-bottom: 5.5px solid var(--color-red);
+}
+
+.profile-user-information {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
+.profile-user-information ul {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-right: 2rem;
+  border-right: 3px solid grey;
+}
+.profile-user-information ul li {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+.profile-user-information ul li:hover {
+  cursor: pointer;
+}
+.profile-user-information ul li:hover .profileInformation-li-big {
+  color: var(--color-red);
+  fill: var(--color-red);
+}
+.profile-user-information ul li svg {
+  height: 2rem;
+  fill: white;
+}
+.profile-user-information ul li svg.active {
+  fill: var(--color-red);
+}
+.profile-user-information ul li .profileInformation-li {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+.profile-user-information ul li .profileInformation-li-big {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.profile-user-information ul li .profileInformation-li-big.active {
+  color: var(--color-red);
+}
+.profile-user-information ul li .profileInformation-li-small {
+  color: grey;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+}
+.profile-user-information .display-userInformation {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.profile-user-information .display-userInformation .personalInformation {
+  display: flex;
+  width: 80%;
+  gap: 3rem;
+  align-items: center;
+  justify-content: center;
+}
+.profile-user-information .display-userInformation .personalInformation .user-firstName,
+.profile-user-information .display-userInformation .personalInformation .user-lastName,
+.profile-user-information .display-userInformation .personalInformation .user-username,
+.profile-user-information .display-userInformation .personalInformation .user-email,
+.profile-user-information .display-userInformation .personalInformation .user-password {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.profile-user-information .display-userInformation .personalInformation .user-firstName .static,
+.profile-user-information .display-userInformation .personalInformation .user-lastName .static,
+.profile-user-information .display-userInformation .personalInformation .user-username .static,
+.profile-user-information .display-userInformation .personalInformation .user-email .static,
+.profile-user-information .display-userInformation .personalInformation .user-password .static {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.profile-user-information .display-userInformation .personalInformation .user-firstName .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-lastName .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-username .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-email .dynamic,
+.profile-user-information .display-userInformation .personalInformation .user-password .dynamic {
+  color: rgb(122, 122, 122);
+  font-weight: bold;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
+}
+.profile-user-information .display-userInformation .user-date-and-username {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.profile-user-information .display-userInformation .user-date-and-username .user-username {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.profile-user-information .display-userInformation .user-date-and-username .user-date {
+  font-size: 1.3rem;
+  color: rgb(120, 120, 120);
+  font-weight: bold;
+}
+.profile-user-information .userPersonalInformation,
+.profile-user-information .userEmail,
+.profile-user-information .userPassword {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+.profile-user-information .userPersonalInformation h1,
+.profile-user-information .userEmail h1,
+.profile-user-information .userPassword h1 {
+  color: white;
+}
+.profile-user-information .userPersonalInformation form,
+.profile-user-information .userEmail form,
+.profile-user-information .userPassword form {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section_game_homepage {
+  width: 100%;
+  padding: 6rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section_game_homepage h2 {
+  color: white;
+  font-size: 1.8rem;
+  margin-bottom: 5rem;
+}
+.section_game_homepage .container_card_game_homepage {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 6rem;
+  width: 80%;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage {
+  width: calc(25% - 6rem);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage h3 {
+  max-width: inherit;
+  font-size: 1.3rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage {
+  max-width: 300px;
+  max-height: 450px;
+  margin-bottom: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage img {
+  width: 100%;
+  object-fit: cover;
+  background-position: center;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_card_game_img_homepage:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_name_price_game_home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.section_game_homepage .container_card_game_homepage .card_game_item_homepage .container_name_price_game_home p {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-red);
+}
+
+.container_banner_review {
+  display: flex;
+  width: 100%;
+  background: var(--color-ultra-dark);
+  color: var(--color-light-grey);
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 0rem;
+}
+.container_banner_review .list_banner_review {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+.container_banner_review .list_banner_review .separator_banner_review {
+  height: 80px;
+  width: 2px;
+  background: var(--color-light-dark);
+}
+.container_banner_review .list_banner_review .item_banner_review {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem 0rem 1.5rem 4rem;
+}
+.container_banner_review .list_banner_review .item_banner_review:not(:first-child) {
+  border-left: 2px solid grey;
+}
+.container_banner_review .list_banner_review .item_banner_review i {
+  font-size: 2rem;
+  color: var(--color-red);
+}
+.container_banner_review .list_banner_review .item_banner_review .container_content_banner_review {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
+}
+.container_banner_review .list_banner_review .item_banner_review .container_content_banner_review h3 {
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+.container_banner_review .list_banner_review .item_banner_review .banner_review_trust {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+}
+.container_banner_review .list_banner_review .item_banner_review .banner_review_trust .container_star_trustpilot {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  align-items: center;
+}
+.container_banner_review .list_banner_review .item_banner_review .banner_review_trust .container_star_trustpilot span {
+  font-size: 1.2rem;
+  color: var(--color-white);
+}
+.container_banner_review .list_banner_review .item_banner_review .banner_review_trust .trust_star {
+  font-size: 2rem;
+}
+.container_banner_review .list_banner_review .item_banner_review .banner_review_trust i {
+  font-size: 1rem;
+}
+.container_banner_review .list_banner_review .item_banner_review .banner_review_trust .content_trust_banner-review {
+  display: flex;
+  flex-direction: column;
+}
+
+.container_main_game_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-white);
+  padding: 5rem;
+  position: relative;
+  min-height: 100vh;
+}
+.container_main_game_page .container_section_game_page {
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  height: 400px;
+}
+.container_main_game_page .container_section_game_page .section_game_page {
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: repeat(1, 1fr);
+  gap: 20rem;
+  margin-bottom: 5rem;
+  position: absolute;
+  top: -50px;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_img_game_page {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10px;
+  height: 400px;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_img_game_page img {
+  max-width: 100%;
+  display: block;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--color-light-dark);
+  background-image: linear-gradient(0deg, var(--color-light-dark), rgba(39, 39, 39, 0) 70%);
+  background-color: transparent;
+  backdrop-filter: blur(60px) saturate(100%);
+  gap: 2rem;
+  height: 100%;
+  width: 500px;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page h2 {
+  font-size: 2.3rem;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page .price_content_buy_game_page {
+  font-size: 3rem;
+  color: var(--color-red);
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .cart_buy_game_page {
+  padding: 1rem 2rem;
+  background: var(--color-red);
+  color: white;
+  border-radius: 5px;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .cart_buy_game_page:hover {
+  cursor: pointer;
+  background: var(--color-red-hover);
+  transition: all 0.2s ease-in-out;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .buy_game_page {
+  padding: 1rem 2rem;
+  background: var(--color-red);
+  color: white;
+  border-radius: 5px;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_content_buy_game_page .container_button_buy_game_page .buy_game_page:hover {
+  cursor: pointer;
+  background: var(--color-red-hover);
+  transition: all 0.2s ease-in-out;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_about_game_page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_about_game_page p {
+  color: var(--color-light-grey);
+}
+.container_main_game_page .container_section_game_page .section_game_page .container_about_game_page span {
+  color: var(--color-light-grey);
+}
+.container_main_game_page .container_game_info_game_page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.container_main_game_page .container_game_info_game_page .content_game_info {
+  display: table-row;
+}
+.container_main_game_page .container_game_info_game_page .content_game_info .content_left_game_info_buy_page {
+  display: table-cell;
+  white-space: nowrap;
+  padding-right: 3rem;
+}
+.container_main_game_page .container_game_info_game_page .content_game_info p {
+  display: table-cell;
+}
+
+.container_content_stock_buy_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 30px;
+  background: var(--color-medium-dark);
+  padding: 1rem 1.5rem;
+}
+.container_content_stock_buy_page li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+}
+.container_content_stock_buy_page li:first-child i {
+  color: red;
+  font-size: 1.3rem;
+}
+.container_content_stock_buy_page li .fa-check {
+  color: green;
+  font-size: 1.3rem;
+}
+.container_content_stock_buy_page .separator_stock_game_page {
+  width: 2px;
+  height: 25px;
+  background: var(--color-light-dark);
+}
+
 footer {
   background-color: var(--color-ultra-dark);
   width: 100%;
@@ -312,7 +915,7 @@ footer {
 }
 
 .footer-container {
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
 }
@@ -429,6 +1032,370 @@ footer {
 }
 .footer-bottom p a:hover {
   text-decoration: underline;
+}
+
+.container_product_singlegame_detail {
+  margin-top: 3rem;
+  max-width: 1000px;
+  width: 100%;
+  min-height: 60vh;
+}
+.container_product_singlegame_detail .product_item_singlegame {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+}
+.container_product_singlegame_detail .product_item_singlegame div {
+  padding: 1rem;
+  font-size: 1.3rem;
+  background: var(--color-light-dark);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: var(--color-white);
+  font-weight: 700;
+  border-radius: 5px;
+}
+.container_product_singlegame_detail .product_item_singlegame div:hover {
+  cursor: pointer;
+}
+.container_product_singlegame_detail .product_item_singlegame div.active {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.container_product_singlegame_detail .product_item_content {
+  background: var(--color-light-dark);
+  background: linear-gradient(180deg, rgb(50, 50, 50) 70%, rgba(235, 25, 5, 0) 100%);
+  padding: 1rem;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.container_product_singlegame_detail .product_item_content > .active {
+  min-width: 100%;
+}
+.container_product_singlegame_detail .product_item_content > .hidden {
+  height: 0;
+  visibility: hidden;
+  display: none;
+}
+.container_product_singlegame_detail .product_item_content .product_content_single h3 {
+  margin-bottom: 1.4rem;
+  margin-top: 1.4rem;
+  color: var(--color-light-white);
+  font-size: 1.4rem;
+}
+.container_product_singlegame_detail .product_item_content .product_content_single p {
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  color: var(--color-light-white);
+}
+.container_product_singlegame_detail .product_item_content .product_info_single {
+  line-height: 1.5rem;
+  text-justify: auto;
+}
+.container_product_singlegame_detail .product_item_content .product_screenshots_single {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.container_product_singlegame_detail .product_item_content .product_screenshots_single div {
+  overflow: hidden;
+  border-radius: 10px;
+  max-width: 350px;
+  max-height: 320px;
+}
+.container_product_singlegame_detail .product_item_content .product_screenshots_single div img {
+  max-width: 100%;
+}
+.container_product_singlegame_detail .product_item_content .product_video_single {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.container_product_singlegame_detail .product_item_content .product_video_single div {
+  flex: 1;
+  width: 100%;
+}
+
+.header_cart {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  background: var(--color-ultra-dark);
+  color: white;
+  padding: 2rem;
+}
+.header_cart a {
+  color: white;
+}
+.header_cart .container_cart_step {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+}
+.header_cart .container_cart_step .sub_container_cart_step {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.header_cart .container_cart_step .sub_container_cart_step .cart_step_separator {
+  height: 3px;
+  width: 30px;
+  background: var(--color-light-dark);
+  flex: 1;
+}
+.header_cart .container_cart_step .sub_container_cart_step .cart_title_step {
+  margin: 0 1rem;
+}
+.header_cart .container_cart_step .sub_container_cart_step .circle_step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  border: 3px solid var(--color-light-dark);
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  font-size: 1rem;
+}
+.header_cart .container_cart_securised_paiement {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+.header_cart .container_cart_securised_paiement .container_cart_lock {
+  display: flex;
+}
+.header_cart .container_cart_securised_paiement .container_cart_lock i {
+  color: var(--color-light-green);
+  margin: 1rem;
+  font-size: 1.4rem;
+}
+.header_cart .container_cart_securised_paiement .container_cart_lock .cart_separator_securised_paiement {
+  height: inherit;
+  width: 2px;
+  margin-right: 1rem;
+  background: var(--color-light-dark);
+}
+.header_cart .container_cart_securised_paiement .cart_text_securised_paiement .second_text_cart_secured_paiement {
+  color: var(--color-light-grey);
+  margin-top: 0.2rem;
+}
+
+.container_section_cart {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  height: 90vh;
+  margin: auto;
+}
+.container_section_cart .container_cart_resume {
+  display: flex;
+  gap: 5rem;
+}
+.container_section_cart .container_cart_resume .cart_section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-light-dark);
+  flex: 1;
+  padding: 4rem;
+  border-radius: 10px;
+}
+.container_section_cart .container_cart_resume .cart_section i {
+  font-size: 3rem;
+  color: var(--color-red);
+}
+.container_section_cart .container_cart_resume .cart_section h3 {
+  color: white;
+  margin: 2rem 0;
+}
+.container_section_cart .container_cart_resume .cart_section p {
+  color: var(--color-light-white);
+  text-align: center;
+}
+.container_section_cart .container_cart_resume .cart_section a {
+  font-weight: bold;
+  margin: 2rem 0 0 0;
+  background: inherit;
+  outline: none;
+  border: 1px solid var(--color-light-white);
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+.container_section_cart .container_cart_resume .cart_section a:hover {
+  background: var(--color-red);
+  cursor: pointer;
+}
+.container_section_cart .container_cart_resume .cart_section_resume {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  background: var(--color-light-dark);
+  padding: 2rem;
+  border-radius: 10px;
+  color: var(--color-light-white);
+  font-size: 1.1rem;
+  max-height: 280px;
+}
+.container_section_cart .container_cart_resume .cart_section_resume .cart_container_officiel_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.container_section_cart .container_cart_resume .cart_section_resume .cart_container_reduct_price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.container_section_cart .container_cart_resume .cart_section_resume .cart_container_total_price {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 0 2.5rem 0;
+  color: white;
+  font-size: 1.2rem;
+}
+.container_section_cart .container_cart_resume .cart_section_resume button {
+  background: rgba(252, 0, 0, 0.7);
+  padding: 1rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  border: 1px solid rgba(252, 0, 0, 0.7);
+  color: white;
+  font-weight: bold;
+}
+.container_section_cart .container_cart_resume .cart_section_resume button:hover {
+  background: var(--color-red-hover);
+  cursor: pointer;
+  border: 1px solid white;
+}
+
+.categories-main-container {
+  width: 100%;
+  padding: 9rem 0rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categories-main-container .categories-container {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+.categories-main-container .categories-container .categorie-container {
+  width: calc(33% - 5rem);
+  aspect-ratio: 2/1;
+  border-radius: 1rem;
+  background-color: purple;
+  position: relative;
+}
+.categories-main-container .categories-container .categorie-container:hover {
+  cursor: pointer;
+}
+.categories-main-container .categories-container .categorie-container:hover .categorie-container-imageTransform {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+.categories-main-container .categories-container .categorie-container .categorie-container-text {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.427);
+  color: white;
+  padding: 0rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: bold;
+  font-size: 1.3rem;
+  z-index: 3;
+  bottom: 10%;
+  left: 5%;
+}
+.categories-main-container .categories-container .categorie-container .categorie-container-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  border-radius: 1rem;
+}
+.categories-main-container .categories-container .categorie-container .action {
+  background-image: url("../../../public/assets/action.webp");
+}
+.categories-main-container .categories-container .categorie-container .adventure {
+  background-image: url("../../../public/assets/adventure.jpg");
+}
+.categories-main-container .categories-container .categorie-container .arcade {
+  background-image: url("../../../public/assets/arcade.jpeg");
+}
+.categories-main-container .categories-container .categorie-container .fps {
+  background-image: url("../../../public/assets/fps.jpg");
+}
+.categories-main-container .categories-container .categorie-container .fighting {
+  background-image: url("../../../public/assets/fighting.webp");
+}
+.categories-main-container .categories-container .categorie-container .rpg {
+  background-image: url("../../../public/assets/RPG.webp");
+}
+.categories-main-container .categories-container .categorie-container .single-player {
+  background-image: url("../../../public/assets/single-player.jpg");
+}
+.categories-main-container .categories-container .categorie-container .strategy {
+  background-image: url("../../../public/assets/strategy.webp");
+}
+.categories-main-container .categories-container .categorie-container .vr {
+  background-image: url("../../../public/assets/VR.jpg");
+}
+.categories-main-container .categories-container .categorie-container .categorie-container-imageTransform {
+  transition: 0.3s;
+  position: absolute;
+  background-size: contain;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+  top: -20px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform-origin: bottom right;
+  padding: initial;
+  z-index: 10;
+}
+.categories-main-container .categories-container .categorie-container .t-action {
+  background-image: url("../../../public/assets/action-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-adventure {
+  background-image: url("../../../public/assets/adventure-perso.png");
+}
+.categories-main-container .categories-container .categorie-container .t-arcade {
+  background-image: url("../../../public/assets/arcade-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-fps {
+  background-image: url("../../../public/assets/fps-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-fighting {
+  background-image: url("../../../public/assets/fighting-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-rpg {
+  background-image: url("../../../public/assets/rpg-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-single-player {
+  background-image: url("../../../public/assets/single-player-perso.webp");
+}
+.categories-main-container .categories-container .categorie-container .t-strategy {
+  background-image: url("../../../public/assets/strategy-perso.png");
+}
+.categories-main-container .categories-container .categorie-container .t-vr {
+  background-image: url("../../../public/assets/vr-perso.webp");
 }
 
 /*# sourceMappingURL=style.css.map */

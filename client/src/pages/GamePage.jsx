@@ -83,42 +83,9 @@ const GamePage = () => {
                     )}
                     <div className={'container_button_buy_game_page'}>
                         <a href="#" className={'cart_buy_game_page'}><i className="fa-solid fa-cart-shopping"></i></a>
-                        <a href="#" className={'buy_game_page'}>Acheter maintenant</a>
+                        <a href="#" className={'buy_game_page'}>Buy Now</a>
                     </div>
                 </article>
-                {/*<article className={'container_about_game_page'}>*/}
-                {/*    <h2>A propos du jeu</h2>*/}
-                {/*    {gameData && (*/}
-                {/*        <p>{gameData.allDataOfGameByAPI[0].summary}</p>*/}
-                {/*    )}*/}
-                {/*    <span>Tags utilisateurs:</span>*/}
-                {/*</article>*/}
-                {/*<div className={'container_game_info_game_page'}>*/}
-                {/*    <div className={'content_game_info'}>*/}
-                {/*        <p className={'content_left_game_info_buy_page'}>Installation:</p>*/}
-                {/*        <p>	Comment activer ce jeu</p>*/}
-                {/*    </div>*/}
-                {/*    <div className={'content_game_info'}>*/}
-                {/*        <p className={'content_left_game_info_buy_page'}>Développeur:</p>*/}
-                {/*        <p>Electronic Arts</p>*/}
-                {/*    </div>*/}
-                {/*    <div className={'content_game_info'}>*/}
-                {/*        <p className={'content_left_game_info_buy_page'}>Editeur:</p>*/}
-                {/*        <p>Electronic Arts</p>*/}
-                {/*    </div>*/}
-                {/*    <div className={'content_game_info'}>*/}
-                {/*        <p className={'content_left_game_info_buy_page'}>Date de sortie:</p>*/}
-                {/*        <p>29 septembre 2023</p>*/}
-                {/*    </div>*/}
-                {/*    <div className={'content_game_info'}>*/}
-                {/*        <p className={'content_left_game_info_buy_page'}>Genre:</p>*/}
-                {/*        <p>Jeux solo</p>*/}
-                {/*    </div>*/}
-                {/*    <div className={'content_game_info'}>*/}
-                {/*        <p className={'content_left_game_info_buy_page'}>Toutes les notes steam:</p>*/}
-                {/*        <p>Moyennes (6749)</p>*/}
-                {/*    </div>*/}
-                {/*</div>*/}
             </section>
             </div>
             {gameData &&

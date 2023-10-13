@@ -49,9 +49,9 @@ const ProductSingleGameDetail = (props) => {
                 <div className={`element ${activeElement === 1 ? "active" : "hidden"}`}
                      onClick={() => toggleElement(1)}>Informations</div>
                 <div className={`element ${activeElement === 2 ? "active" : "hidden"}`}
-                     onClick={() => toggleElement(2)}>Capture d'écran</div>
+                     onClick={() => toggleElement(2)}>Game Images</div>
                 <div className={`element ${activeElement === 3 ? "active" : "hidden"}`}
-                     onClick={() => toggleElement(3)}>Vidéo</div>
+                     onClick={() => toggleElement(3)}>Gameplay Video</div>
             </div>
             <div className={'product_item_content'}>
                 <div className={`product_content_single product_info_single ${activeElement === 1 ? 'active' : 'hidden'}`}>

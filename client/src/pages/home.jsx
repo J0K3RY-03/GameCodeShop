@@ -5,7 +5,7 @@ import Categories from "../components/Categories";
 export const Home = () => {
   return (
     <>
-      <Game />
+      <Game element={<Game />} />
       <BannerReview />
       <Categories />
     </>
