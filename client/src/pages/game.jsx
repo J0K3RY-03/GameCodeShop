@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import header from "../components/Header.jsx";
+import BannerReview from "../components/BannerReview.jsx";
 
 const Game = () => {
   const [dataGame, setDataGame] = useState([]);
