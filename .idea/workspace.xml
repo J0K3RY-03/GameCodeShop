@@ -5,26 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e6715f7-7a2b-4bcc-acea-6ec138ffa62b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/GameCodeShop.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/public/assets/img_game_page.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/StockComposant.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/pages/GamePage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/scss/components/_stockComposant.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/scss/pages/_gamePage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/ProductSingleGameDetail.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/scss/components/_productSingleGameDetail.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api.getScreenshots.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api.getSingleGame.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/routes/api.getVideoOfGame.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/public/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/style.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/main.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/main.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/GamePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/GamePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/pages/game.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/pages/game.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scss/components/_stockComposant.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/components/_stockComposant.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/scss/pages/_gamePage.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/pages/_gamePage.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/ejs" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/ejs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/jake" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/jake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/mime" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodemon" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodemon" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nodetouch" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/nopt" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/nopt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/node_modules/.bin/semver" beforeDir="false" afterPath="$PROJECT_DIR$/server/node_modules/.bin/semver" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +62,8 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "jason",
-    "javascript.nodejs.core.library.configured.version": "18.18.0",
-    "javascript.nodejs.core.library.typings.version": "18.18.0",
+    "javascript.nodejs.core.library.configured.version": "18.17.1",
+    "javascript.nodejs.core.library.typings.version": "18.17.1",
     "last_opened_file_path": "C:/Users/joker/Desktop/Projets Perso",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -105,6 +101,7 @@
       <workItem from="1695979861535" duration="11320000" />
       <workItem from="1696258742589" duration="63000" />
       <workItem from="1696942345697" duration="8665000" />
+      <workItem from="1697107515775" duration="28129000" />
     </task>
     <servers />
   </component>

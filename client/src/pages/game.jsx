@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import header from "../components/Header.jsx";
 import BannerReview from "../components/BannerReview.jsx";
+import { Link } from 'react-router-dom';
 
 const Game = () => {
     const [dataGame, setDataGame] = useState([]);
@@ -77,9 +78,11 @@ const Game = () => {
 
                             return (
                                 <li className={"card_game_item_homepage"} key={item._id}>
+                                    <Link to={`/game-page/${item.name}-${item._id}-${item.id}`}>
                                     <div className={"container_card_game_img_homepage"}>
                                         <img src={modifiedUrl} alt={item.name} />
                                     </div>
+                                    </Link>
                                     <div className={'container_name_price_game_home'}>
                                         <h3>{item.name}</h3>
                                         <p>{item.price}€</p>

@@ -5,20 +5,22 @@
   gap: 1rem;
   border-radius: 30px;
   background: var(--color-medium-dark);
-  padding: 0.6rem 1.5rem;
+  padding: 1rem 1.5rem;
 
   li {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.8rem;
+    font-size: 1rem;
 
     &:first-child i {
       color: red;
+      font-size: 1.3rem;
     }
 
     .fa-check {
       color: green;
+      font-size: 1.3rem;
     }
   }
 
