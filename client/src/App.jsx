@@ -16,9 +16,15 @@ function App() {
   const location = useLocation();
 
   // Array that contains all the paths where I don't want to display the Header
-  const pathsWithoutHeader = ["/login", "/register", "/cart", "/user-profile"];
+  const pathsWithoutHeader = [
+    "/login",
+    "/register",
+    "/cart",
+    "/user-profile",
+    "/new-game",
+  ];
 
-  const pathsWithHeaderSecond = ["/user-profile"];
+  const pathsWithHeaderSecond = ["/user-profile", "/new-game"];
 
   // Check if the array contains the path
   const shouldDisplayHeader = !pathsWithoutHeader.includes(location.pathname);
