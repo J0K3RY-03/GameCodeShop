@@ -1,0 +1,67 @@
+.section_game_homepage {
+  width: 100%;
+  padding: 6rem 0rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    color: white;
+    font-size: 1.8rem;
+    margin-bottom: 5rem;
+  }
+
+  .container_card_game_homepage {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 6rem;
+    width: 80%;
+
+    .card_game_item_homepage {
+      width: calc(25% - 6rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      h3 {
+        max-width: inherit;
+        font-size: 1.3rem;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .container_card_game_img_homepage {
+        max-width: 300px;
+        max-height: 450px;
+        margin-bottom: 0.3rem;
+        transition: all 0.2s ease-in-out;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          object-fit: cover;
+          background-position: center;
+        }
+
+        &:hover {
+          cursor: pointer;
+          transform: scale(1.05);
+        }
+      }
+
+      .container_name_price_game_home {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 1.5rem;
+
+        p {
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+}

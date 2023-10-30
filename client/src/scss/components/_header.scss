@@ -1,0 +1,131 @@
+.header_home {
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    padding: 2rem 0rem 0rem 0rem;
+  }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 30%
+  );
+  height: 60vh;
+  width: 100%;
+
+  .logo_gcs {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .container_header_log_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    a {
+      color: white;
+      i {
+        font-size: 1.5rem;
+        &:hover {
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+
+  .userConnected-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    a {
+      i {
+        display: flex;
+        gap: 0.5rem;
+        font-size: 1.2rem;
+      }
+    }
+    svg {
+      height: 1.3rem;
+      fill: white;
+      &:hover {
+        cursor: pointer;
+        fill: var(--color-red);
+      }
+    }
+  }
+}
+
+.header_second {
+  height: 15vh;
+  width: 100%;
+  background-color: var(--color-ultra-dark);
+
+  .header-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 4;
+    padding: 2rem 0rem 0rem 0rem;
+  }
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .logo_gcs {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .container_header_log_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    a {
+      color: white;
+      i {
+        font-size: 1.3rem;
+        &:hover {
+          color: var(--color-red);
+        }
+      }
+    }
+  }
+
+  .userConnected-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    a {
+      i {
+        display: flex;
+        gap: 0.5rem;
+      }
+    }
+    svg {
+      height: 1.3rem;
+      fill: white;
+      &:hover {
+        cursor: pointer;
+        fill: var(--color-red);
+      }
+    }
+  }
+}

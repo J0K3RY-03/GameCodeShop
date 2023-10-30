@@ -1,0 +1,89 @@
+@import "../utils/variables";
+
+.loginAndRegister-container {
+  display: flex;
+  height: 100vh;
+}
+
+.loginAndRegister-container-left {
+  background-color: var(--color-light-dark);
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loginAndRegister-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 1.5rem;
+
+  input {
+    background-color: var(--color-ultra-dark);
+    border: 2px solid var(--color-medium-dark);
+    border-radius: 0.5rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    &:hover {
+      border-color: var(--color-red);
+    }
+    &:focus {
+      outline: none;
+      border-color: var(--color-red);
+    }
+  }
+
+  button {
+    background-color: var(--color-red);
+    border: none;
+    border-radius: 0.5rem;
+    height: 2.8rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    color: white;
+    font-weight: bold;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-red-hover);
+    }
+  }
+}
+
+.login-registerLink {
+  color: white;
+  &:hover {
+    color: var(--color-red);
+  }
+}
+
+.loginAndRegister-container-right {
+  background-image: url("../assets/wallpaper-login.jpg");
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+  height: 100vh;
+  svg {
+    position: absolute;
+    right: 3.5%;
+    top: 3.5%;
+    fill: white;
+    &:hover {
+      cursor: pointer;
+      fill: var(--color-red);
+    }
+  }
+}
+
+.handle-email-register-error,
+.handle-username-register-error,
+.handle-emailAndPassword-login-error {
+  font-weight: bold;
+  color: rgb(241, 145, 145);
+}

@@ -1,0 +1,32 @@
+.container_content_stock_buy_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 30px;
+  background: var(--color-medium-dark);
+  padding: 1rem 1.5rem;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+
+    &:first-child i {
+      color: red;
+      font-size: 1.3rem;
+    }
+
+    .fa-check {
+      color: green;
+      font-size: 1.3rem;
+    }
+  }
+
+  .separator_stock_game_page {
+    width: 2px;
+    height: 25px;
+    background: var(--color-light-dark);
+  }
+}

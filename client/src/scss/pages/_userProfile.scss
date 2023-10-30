@@ -1,0 +1,159 @@
+@import "../utils/variables";
+
+.profile-contentContainer {
+  background-color: var(--color-medium-dark);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 7rem 0rem;
+}
+
+.profile-navbar {
+  padding-bottom: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  width: 80%;
+  border-bottom: 3px solid grey;
+  li {
+    font-size: 2rem;
+    color: white;
+    font-weight: bold;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      color: var(--color-red);
+    }
+  }
+  .active {
+    color: var(--color-red);
+    border-bottom: 5.5px solid var(--color-red);
+  }
+}
+
+.profile-user-information {
+  padding: 3rem 0rem;
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  ul {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding-right: 2rem;
+    border-right: 3px solid grey;
+    li {
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      &:hover {
+        cursor: pointer;
+        .profileInformation-li-big {
+          color: var(--color-red);
+          fill: var(--color-red);
+        }
+      }
+      svg {
+        height: 2rem;
+        fill: white;
+        &.active {
+          fill: var(--color-red);
+        }
+      }
+      .profileInformation-li {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+      .profileInformation-li-big {
+        color: white;
+        font-size: 1.5rem;
+        font-weight: bold;
+        &.active {
+          color: var(--color-red);
+        }
+      }
+      .profileInformation-li-small {
+        color: grey;
+        font-weight: bold;
+        font-size: 1.1rem;
+        letter-spacing: 0.05rem;
+      }
+    }
+  }
+  .display-userInformation {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    .personalInformation {
+      display: flex;
+      width: 80%;
+      gap: 3rem;
+      align-items: center;
+      justify-content: center;
+      .user-firstName,
+      .user-lastName,
+      .user-username,
+      .user-email,
+      .user-password {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        .static {
+          color: white;
+          font-size: 1.8rem;
+          font-weight: bold;
+        }
+        .dynamic {
+          color: rgb(122, 122, 122);
+          font-weight: bold;
+          font-size: 1.5rem;
+          letter-spacing: 0.15rem;
+        }
+      }
+    }
+    .user-date-and-username {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      .user-username {
+        color: white;
+        font-size: 2.5rem;
+        font-weight: bold;
+      }
+      .user-date {
+        font-size: 1.3rem;
+        color: rgb(120, 120, 120);
+        font-weight: bold;
+      }
+    }
+  }
+  .userPersonalInformation,
+  .userEmail,
+  .userPassword {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    h1 {
+      color: white;
+    }
+    form {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+}
